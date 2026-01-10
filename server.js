@@ -36,8 +36,8 @@ app.post('/api/contact', async (req, res) => {
 
     try {
         const { data, error } = await resend.emails.send({
-            from: 'Agency Contact <onboarding@resend.dev>', // Por ahora usa este para pruebas
-            to: 'estigarribialuis95@gmail.com', // Tu correo de destino
+            from: 'Agency Contact <onboarding@resend.dev>',
+            to: 'luisalfredoestigarribiasosa85@gmail.com', // Cambiado según el error de Resend
             reply_to: email,
             subject: `Nuevo mensaje de ${name} - Luis Dev`,
             text: `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`,
