@@ -5,7 +5,14 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const PORT = process.env.PORT || 10000; // Render prefiere el puerto 10000 o el que asigne en PORT
+const PORT = process.env.PORT || 10000;
+
+// Diagnóstico inicial para Render
+console.log('--- Diagnóstico de Inicio ---');
+console.log(`PORT: ${PORT}`);
+console.log(`EMAIL_USER configurado: ${process.env.EMAIL_USER ? 'SÍ' : 'NO'}`);
+console.log(`EMAIL_PASS configurado: ${process.env.EMAIL_PASS ? 'SÍ (longitud: ' + process.env.EMAIL_PASS.length + ')' : 'NO'}`);
+console.log('---------------------------');
 
 // Logger para Render
 app.use((req, res, next) => {
@@ -24,46 +31,45 @@ app.post('/api/contact', async (req, res) => {
     console.log('📬 Nuevo intento de contacto:');
     console.log(`Nombre: ${name}, Email: ${email}`);
 
-    // Verificación rápida de variables
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-        console.error('❌ ERROR: Variables EMAIL_USER o EMAIL_PASS no configuradas en Render');
-        return res.status(200).json({ message: 'Recibido (Modo log)' });
+        console.error('❌ ERROR: Faltan EMAIL_USER o EMAIL_PASS en las variables de entorno de Render.');
+        return res.status(200).json({ message: 'Error de servidor, pero el mensaje fue logueado.', log: true });
     }
 
-    // Configuración usando 'service: gmail' que es más robusto para Gmail
+    // Configuración súper explícita para evitar problemas en Render
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
+        secure: true, // SSL directo
         auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASS
         },
-        connectionTimeout: 20000, // Aumentado a 20 segundos para evitar ETIMEDOUT en nubes lentas
-        greetingTimeout: 20000,
-        socketTimeout: 20000
+        connectionTimeout: 30000,
+        greetingTimeout: 30000,
+        socketTimeout: 30000,
+        debug: true, // Activa logs de nodemailer en la consola
+        logger: true
     });
 
     let mailOptions = {
         from: `"${name}" <${process.env.EMAIL_USER}>`,
         to: process.env.EMAIL_USER,
         replyTo: email,
-        subject: `Nuevo mensaje de ${name} - Agencia Web`,
+        subject: `Nuevo mensaje de ${name} - Luis Dev`,
         text: `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
     };
 
     try {
-        // Ejecutamos el envío sin 'await' bloqueante para responder rápido al cliente
-        // O lo dejamos con await pero manejando el error para no asustar al visitante
         await transporter.sendMail(mailOptions);
-        console.log('✅ Email enviado con éxito');
-        res.status(200).json({ message: 'Gracias por tu mensaje' });
+        console.log('✅ Email enviado satisfactoriamente');
+        res.status(200).json({ message: 'Tu mensaje ha sido enviado' });
     } catch (error) {
-        console.error('❌ Error enviando email:', error.message);
-        // IMPORTANTE: Devolvemos 200 aunque falle el email para que el CLIENTE 
-        // reciba un mensaje de éxito, ya que el mensaje ya quedó registrado en tus LOGS de Render.
-        // Así no pierdes al cliente y tú puedes revisar el log después.
+        console.error('❌ Error SMTP detallado:', error);
+        // Devolvemos 200 igual para no asustar al cliente
         res.status(200).json({
             message: 'Mensaje recibido',
-            warning: 'Notificación por correo demorada'
+            warning: 'Notificación demorada'
         });
     }
 });
