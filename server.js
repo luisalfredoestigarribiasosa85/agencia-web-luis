@@ -2,16 +2,15 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend'); // Cambiamos a Resend
 
 const app = express();
 const PORT = process.env.PORT || 10000;
+const resend = new Resend(process.env.RESEND_API_KEY); // API Key de Resend
 
-// Diagnóstico inicial para Render
-console.log('--- Diagnóstico de Inicio ---');
-console.log(`PORT: ${PORT}`);
-console.log(`EMAIL_USER configurado: ${process.env.EMAIL_USER ? 'SÍ' : 'NO'}`);
-console.log(`EMAIL_PASS configurado: ${process.env.EMAIL_PASS ? 'SÍ (longitud: ' + process.env.EMAIL_PASS.length + ')' : 'NO'}`);
+// Diagnóstico Luis Dev
+console.log('--- Diagnóstico Luis Dev ---');
+console.log(`RESEND_API_KEY configurada: ${process.env.RESEND_API_KEY ? 'SÍ' : 'NO'}`);
 console.log('---------------------------');
 
 // Logger para Render
@@ -24,53 +23,36 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/')));
 
-// API Route for contact form
 app.post('/api/contact', async (req, res) => {
     const { name, email, message } = req.body;
 
-    console.log('📬 Nuevo intento de contacto:');
+    console.log('📬 Nuevo intento de contacto (via Resend):');
     console.log(`Nombre: ${name}, Email: ${email}`);
 
-    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-        console.error('❌ ERROR: Faltan EMAIL_USER o EMAIL_PASS en las variables de entorno de Render.');
-        return res.status(200).json({ message: 'Error de servidor, pero el mensaje fue logueado.', log: true });
+    if (!process.env.RESEND_API_KEY) {
+        console.error('❌ ERROR: RESEND_API_KEY no configurada');
+        return res.status(200).json({ message: 'Recibido (Modo log)' });
     }
 
-    // Configuración súper explícita para evitar problemas en Render
-    let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: true, // SSL directo
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        },
-        connectionTimeout: 30000,
-        greetingTimeout: 30000,
-        socketTimeout: 30000,
-        debug: true, // Activa logs de nodemailer en la consola
-        logger: true
-    });
-
-    let mailOptions = {
-        from: `"${name}" <${process.env.EMAIL_USER}>`,
-        to: process.env.EMAIL_USER,
-        replyTo: email,
-        subject: `Nuevo mensaje de ${name} - Luis Dev`,
-        text: `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
-    };
-
     try {
-        await transporter.sendMail(mailOptions);
-        console.log('✅ Email enviado satisfactoriamente');
-        res.status(200).json({ message: 'Tu mensaje ha sido enviado' });
-    } catch (error) {
-        console.error('❌ Error SMTP detallado:', error);
-        // Devolvemos 200 igual para no asustar al cliente
-        res.status(200).json({
-            message: 'Mensaje recibido',
-            warning: 'Notificación demorada'
+        const { data, error } = await resend.emails.send({
+            from: 'Agency Contact <onboarding@resend.dev>', // Por ahora usa este para pruebas
+            to: 'estigarribialuis95@gmail.com', // Tu correo de destino
+            reply_to: email,
+            subject: `Nuevo mensaje de ${name} - Luis Dev`,
+            text: `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`,
         });
+
+        if (error) {
+            console.error('❌ Error de Resend:', error);
+            return res.status(200).json({ message: 'Mensaje recibido', log: true });
+        }
+
+        console.log('✅ Email enviado vía Resend:', data.id);
+        res.status(200).json({ message: 'Tu mensaje ha sido enviado con éxito' });
+    } catch (err) {
+        console.error('❌ Error crítico:', err.message);
+        res.status(200).json({ message: 'Mensaje recibido' });
     }
 });
 
