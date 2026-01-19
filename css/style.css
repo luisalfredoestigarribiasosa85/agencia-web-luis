@@ -17,7 +17,11 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, .navbar-brand {
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -72,8 +76,22 @@ h1, h2, h3, h4, .navbar-brand {
 .hero {
     min-height: 100vh;
     padding-top: 100px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
+    color: var(--white);
+}
+
+.hero h1,
+.hero p,
+.hero h5 {
+    color: var(--white) !important;
+}
+
+.hero .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .hero-img-wrapper {
@@ -85,7 +103,7 @@ h1, h2, h3, h4, .navbar-brand {
     backdrop-filter: blur(15px);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -105,7 +123,7 @@ h1, h2, h3, h4, .navbar-brand {
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 30px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1) !important;
 }
 
 .icon-box {
@@ -137,6 +155,78 @@ h1, h2, h3, h4, .navbar-brand {
 
 .highlight-card p {
     color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Portfolio Section */
+.portfolio-card {
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.tech-stack .badge {
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+/* Process Section */
+.process-step {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    opacity: 0.1;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.step-icon i {
+    z-index: 2;
+}
+
+.process-step h4 {
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+}
+
+.process-step p {
+    position: relative;
+    z-index: 1;
+    margin-top: 0.5rem;
 }
 
 /* Contact */
@@ -173,12 +263,63 @@ footer {
     transition-duration: 1000ms !important;
 }
 
+/* Pricing Section */
+.pricing-card {
+    background: var(--white);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--primary-color) !important;
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.price h2 {
+    color: var(--primary-color);
+}
+
+/* FAQ Accordion Custom Styles */
+.accordion-item {
+    border: none;
+    margin-bottom: 1px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(0, 123, 255, 0.05);
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 123, 255, 0.1);
+}
+
+.accordion-button::after {
+    background-size: 1rem;
+}
+
 @media (max-width: 991px) {
     .navbar-collapse {
         background: var(--white);
         padding: 1rem;
         border-radius: 10px;
         margin-top: 1rem;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     }
 }
