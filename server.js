@@ -6,7 +6,8 @@ const { Resend } = require('resend'); // Cambiamos a Resend
 
 const app = express();
 const PORT = process.env.PORT || 10000;
-const resend = new Resend(process.env.RESEND_API_KEY); // API Key de Resend
+// Inicializamos Resend solo si hay API Key (evita crash al arrancar sin clave)
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 // Diagnóstico Luis Dev
 console.log('--- Diagnóstico Luis Dev ---');
@@ -29,7 +30,7 @@ app.post('/api/contact', async (req, res) => {
     console.log('📬 Nuevo intento de contacto (via Resend):');
     console.log(`Nombre: ${name}, Email: ${email}`);
 
-    if (!process.env.RESEND_API_KEY) {
+    if (!resend) {
         console.error('❌ ERROR: RESEND_API_KEY no configurada');
         return res.status(200).json({ message: 'Recibido (Modo log)' });
     }
