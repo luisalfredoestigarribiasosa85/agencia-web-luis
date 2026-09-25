@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luis Estigarribia | Agencia de Desarrollo Web</title>
+    <title data-i18n-title="meta.title">Luis Estigarribia | Agencia de Desarrollo Web</title>
     <!-- Meta tags for SEO -->
-    <meta name="description"
+    <meta name="description" data-i18n-meta-description="meta.description"
         content="Luis Estigarribia - Especialista en desarrollo web para profesionales, agencias y empresas. Creación de sitios web modernos y optimizados.">
     <!-- Google Fonts -->
     <link
@@ -36,14 +36,30 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto text-uppercase">
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#hero">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#portafolio">Portafolio</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#proceso">Mi Proceso</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#precios">Precios</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#faq">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#sobre-mi">Sobre Mí</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 btn-contact ms-lg-3" href="#contacto">Contacto</a>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#hero" data-i18n="nav.home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#servicios"
+                            data-i18n="nav.services">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#portafolio"
+                            data-i18n="nav.portfolio">Portafolio</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#proceso"
+                            data-i18n="nav.process">Mi Proceso</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#precios"
+                            data-i18n="nav.pricing">Precios</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#faq" data-i18n="nav.faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#sobre-mi"
+                            data-i18n="nav.about">Sobre Mí</a></li>
+                    <li class="nav-item dropdown ms-lg-3">
+                        <a class="nav-link dropdown-toggle lang-toggle" href="#" id="langDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-globe me-1"></i><span id="langLabel">Español</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li><button class="dropdown-item" data-lang="es">Español</button></li>
+                            <li><button class="dropdown-item" data-lang="en">English</button></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 btn-contact ms-lg-3" href="#contacto"
+                            data-i18n="nav.contact">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -55,13 +71,16 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7" data-aos="fade-right">
-                    <h5 class="text-primary fw-bold text-uppercase mb-3">Impulsando tu Negocio Digital</h5>
-                    <h1 class="display-3 fw-extra-bold mb-4">Soluciones Web Pro para <span class="highlight">Gente
-                            Visionaria.</span></h1>
-                    <p class="lead text-muted mb-5">Soy Luis Estigarribia, ayudo a profesionales independientes,
-                        empresas y restaurantes a marcar su presencia online con sitios web de alto impacto.</p>
+                    <h5 class="text-primary fw-bold text-uppercase mb-3" data-i18n="hero.kicker">Impulsando tu Negocio
+                        Digital</h5>
+                    <h1 class="display-3 fw-extra-bold mb-4" data-i18n-html="hero.title">Soluciones Web Pro para <span
+                            class="highlight">Gente Visionaria.</span></h1>
+                    <p class="lead text-muted mb-5" data-i18n="hero.subtitle">Soy Luis Estigarribia, ayudo a
+                        profesionales independientes, empresas y restaurantes a marcar su presencia online con sitios
+                        web de alto impacto.</p>
                     <div class="hero-btns">
-                        <a href="#contacto" class="btn btn-primary btn-lg px-5 py-3 me-3 mb-3">Empezar Proyecto</a>
+                        <a href="#contacto" class="btn btn-primary btn-lg px-5 py-3 me-3 mb-3"
+                            data-i18n="hero.cta">Empezar Proyecto</a>
                         <a href="https://wa.me/595983835222" class="btn btn-outline-primary btn-lg px-5 py-3 mb-3"
                             target="_blank">
                             <i class="fab fa-whatsapp me-2"></i> WhatsApp
@@ -73,7 +92,7 @@
                         <!-- We can add a profile image or a high-quality illustration here -->
                         <div class="p-4">
                             <i class="fas fa-code fa-5x text-primary mb-3"></i>
-                            <h4 class="text-primary">Desarrollo a Medida</h4>
+                            <h4 class="text-primary" data-i18n="hero.cardTitle">Desarrollo a Medida</h4>
                             <p class="small text-dark">HTML • Bootstrap • JS • Node.js • Ruby on Rails</p>
                         </div>
                     </div>
@@ -86,33 +105,33 @@
     <section class="services py-5" id="servicios">
         <div class="container py-5">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3">Mis Servicios</h2>
-                <p class="text-muted mx-auto max-600">Diseño y desarrollo enfocado en resultados. Tu sitio web será
-                    rápido, responsive y listo para atraer clientes.</p>
+                <h2 class="display-5 fw-bold mb-3" data-i18n="services.title">Mis Servicios</h2>
+                <p class="text-muted mx-auto max-600" data-i18n="services.subtitle">Diseño y desarrollo enfocado en
+                    resultados. Tu sitio web será rápido, responsive y listo para atraer clientes.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card text-center p-5 shadow-sm h-100">
                         <div class="icon-box mb-4"><i class="fas fa-user-tie"></i></div>
-                        <h3>Profesionales</h3>
-                        <p class="text-muted">Portafolios y sitios personales para destacar tu marca personal en el
-                            mercado.</p>
+                        <h3 data-i18n="services.professionals">Profesionales</h3>
+                        <p class="text-muted" data-i18n="services.professionals.desc">Portafolios y sitios personales
+                            para destacar tu marca personal en el mercado.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card text-center p-5 shadow-sm h-100 highlight-card">
                         <div class="icon-box mb-4 text-white"><i class="fas fa-utensils"></i></div>
-                        <h3>Restaurantes</h3>
-                        <p class="text-muted">Menús digitales interactivos y sistemas de reserva elegantes para tu
-                            negocio gastronómico.</p>
+                        <h3 data-i18n="services.restaurants">Restaurantes</h3>
+                        <p class="text-muted" data-i18n="services.restaurants.desc">Menús digitales interactivos y
+                            sistemas de reserva elegantes para tu negocio gastronómico.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card text-center p-5 shadow-sm h-100">
                         <div class="icon-box mb-4"><i class="fas fa-building"></i></div>
-                        <h3>Pymes & Agencias</h3>
-                        <p class="text-muted">Soluciones corporativas que transmiten confianza y profesionalismo a gran
-                            escala.</p>
+                        <h3 data-i18n="services.smb">Pymes & Agencias</h3>
+                        <p class="text-muted" data-i18n="services.smb.desc">Soluciones corporativas que transmiten
+                            confianza y profesionalismo a gran escala.</p>
                     </div>
                 </div>
             </div>
@@ -123,9 +142,9 @@
     <section class="portfolio py-5 bg-white" id="portafolio">
         <div class="container py-5">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3">Portafolio de Proyectos</h2>
-                <p class="text-muted mx-auto max-600">Soluciones digitales reales que demuestran nuestra capacidad
-                    técnica y enfoque en resultados.</p>
+                <h2 class="display-5 fw-bold mb-3" data-i18n="portfolio.title">Portafolio de Proyectos</h2>
+                <p class="text-muted mx-auto max-600" data-i18n="portfolio.subtitle">Soluciones digitales reales que
+                    demuestran nuestra capacidad técnica y enfoque en resultados.</p>
             </div>
             <div class="row g-4">
                 <!-- Project 1: Vendelo -->
@@ -134,9 +153,11 @@
                         <div class="portfolio-content p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <h3 class="h4 fw-bold">BarberShop</h3>
-                                <span class="badge bg-primary">En Vivo</span>
+                                <span class="badge bg-primary" data-i18n="portfolio.live">En Vivo</span>
                             </div>
-                            <p class="text-muted small">Sitio Web demo para Barberías, incluye servicios, galeria de imagenes, ubicación del local, boton de Whatsapp y más.</p>
+                            <p class="text-muted small" data-i18n="portfolio.barbershop.desc">Sitio Web demo para
+                                Barberías, incluye servicios, galeria de imagenes, ubicación del local, boton de
+                                Whatsapp y más.</p>
                             <div class="tech-stack mb-4">
                                 <span class="badge bg-light text-dark border me-1">HTML</span>
                                 <span class="badge bg-light text-dark border me-1">CSS</span>
@@ -144,7 +165,8 @@
                             </div>
                             <a href="https://luisalfredoestigarribiasosa85.github.io/barbershop/" target="_blank"
                                 class="btn btn-outline-primary btn-sm w-100">
-                                <i class="fas fa-external-link-alt me-2"></i> Ver Proyecto
+                                <i class="fas fa-external-link-alt me-2"></i> <span
+                                    data-i18n="portfolio.view">Ver Proyecto</span>
                             </a>
                         </div>
                     </div>
@@ -155,17 +177,21 @@
                         <div class="portfolio-content p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <h3 class="h4 fw-bold">Aura Beauty Studio</h3>
-                                <span class="badge bg-primary">En Vivo</span>
+                                <span class="badge bg-primary" data-i18n="portfolio.live">En Vivo</span>
                             </div>
-                            <p class="text-muted small">Sitio Web demo para Peluquerías, incluye servicios, galeria de imagenes, ubicación del local, boton de Whatsapp y más.</p>
+                            <p class="text-muted small" data-i18n="portfolio.aura.desc">Sitio Web demo para
+                                Peluquerías, incluye servicios, galeria de imagenes, ubicación del local, boton de
+                                Whatsapp y más.</p>
                             <div class="tech-stack mb-4">
                                 <span class="badge bg-light text-dark border me-1">HTML</span>
                                 <span class="badge bg-light text-dark border me-1">CSS</span>
                                 <span class="badge bg-light text-dark border">Javascript</span>
                             </div>
-                            <a href="https://luisalfredoestigarribiasosa85.github.io/peluqueria-fem/" target="_blank"
+                            <a href="https://luisalfredoestigarribiasosa85.github.io/peluqueria-fem/"
+                                target="_blank"
                                 class="btn btn-outline-primary btn-sm w-100">
-                                <i class="fas fa-external-link-alt me-2"></i> Ver Proyecto
+                                <i class="fas fa-external-link-alt me-2"></i> <span
+                                    data-i18n="portfolio.view">Ver Proyecto</span>
                             </a>
                         </div>
                     </div>
@@ -176,9 +202,11 @@
                         <div class="portfolio-content p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <h3 class="h4 fw-bold">Luna Nails</h3>
-                                <span class="badge bg-primary">En Vivo</span>
+                                <span class="badge bg-primary" data-i18n="portfolio.live">En Vivo</span>
                             </div>
-                            <p class="text-muted small">Un sitio web moderno y profesional para Spa de Uñas, con una interfaz fácil de usar y una experiencia de usuario excelente.</p>
+                            <p class="text-muted small" data-i18n="portfolio.lunanails.desc">Un sitio web moderno y
+                                profesional para Spa de Uñas, con una interfaz fácil de usar y una experiencia de
+                                usuario excelente.</p>
                             <div class="tech-stack mb-4">
                                 <span class="badge bg-light text-dark border me-1">HTML</span>
                                 <span class="badge bg-light text-dark border me-1">CSS</span>
@@ -186,7 +214,8 @@
                             </div>
                             <a href="https://luisalfredoestigarribiasosa85.github.io/luna-nails/" target="_blank"
                                 class="btn btn-outline-primary btn-sm w-100">
-                                <i class="fas fa-external-link-alt me-2"></i> Ver Proyecto
+                                <i class="fas fa-external-link-alt me-2"></i> <span
+                                    data-i18n="portfolio.view">Ver Proyecto</span>
                             </a>
                         </div>
                     </div>
@@ -195,7 +224,8 @@
             <div class="text-center mt-5">
                 <a href="https://portfolio-luis-estigarribia.vercel.app/" target="_blank"
                     class="btn btn-link text-primary fw-bold text-decoration-none">
-                    Ver más proyectos en mi portafolio personal <i class="fas fa-arrow-right ms-2"></i>
+                    <span data-i18n="portfolio.more">Ver más proyectos en mi portafolio personal</span> <i
+                        class="fas fa-arrow-right ms-2"></i>
                 </a>
             </div>
         </div>
@@ -205,44 +235,45 @@
     <section class="process py-5" id="proceso">
         <div class="container py-5">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3">Mi Proceso</h2>
-                <p class="text-muted mx-auto max-600">Un camino claro desde la idea inicial hasta que tu sitio esté en
-                    línea y generando resultados.</p>
+                <h2 class="display-5 fw-bold mb-3" data-i18n="process.title">Mi Proceso</h2>
+                <p class="text-muted mx-auto max-600" data-i18n="process.subtitle">Un camino claro desde la idea
+                    inicial hasta que tu sitio esté en línea y generando resultados.</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="process-step text-center p-4">
                         <div class="step-number mb-3">01</div>
                         <div class="step-icon mb-4"><i class="fas fa-comments"></i></div>
-                        <h4>Descubrimiento</h4>
-                        <p class="text-muted small">Conversamos para entender tu negocio, audiencia y metas específicas.
-                        </p>
+                        <h4 data-i18n="process.discovery">Descubrimiento</h4>
+                        <p class="text-muted small" data-i18n="process.discovery.desc">Conversamos para entender tu
+                            negocio, audiencia y metas específicas.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="process-step text-center p-4">
                         <div class="step-number mb-3">02</div>
                         <div class="step-icon mb-4"><i class="fas fa-pencil-ruler"></i></div>
-                        <h4>Diseño & Estrategia</h4>
-                        <p class="text-muted small">Creamos la estructura visual y funcional enfocada en la conversión.
-                        </p>
+                        <h4 data-i18n="process.design">Diseño & Estrategia</h4>
+                        <p class="text-muted small" data-i18n="process.design.desc">Creamos la estructura visual y
+                            funcional enfocada en la conversión.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="process-step text-center p-4">
                         <div class="step-number mb-3">03</div>
                         <div class="step-icon mb-4"><i class="fas fa-laptop-code"></i></div>
-                        <h4>Desarrollo</h4>
-                        <p class="text-muted small">Construimos tu sitio con código limpio, rápido y optimizado para
-                            SEO.</p>
+                        <h4 data-i18n="process.dev">Desarrollo</h4>
+                        <p class="text-muted small" data-i18n="process.dev.desc">Construimos tu sitio con código limpio,
+                            rápido y optimizado para SEO.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="process-step text-center p-4">
                         <div class="step-number mb-3">04</div>
                         <div class="step-icon mb-4"><i class="fas fa-rocket"></i></div>
-                        <h4>Lanzamiento</h4>
-                        <p class="text-muted small">Lanzamos tu web al mundo y te brindamos soporte para que crezca.</p>
+                        <h4 data-i18n="process.launch">Lanzamiento</h4>
+                        <p class="text-muted small" data-i18n="process.launch.desc">Lanzamos tu web al mundo y te
+                            brindamos soporte para que crezca.</p>
                     </div>
                 </div>
             </div>
@@ -260,17 +291,21 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <h2 class="display-5 fw-bold mb-4">Luis Estigarribia</h2>
-                    <p class="lead mb-4">Desarrollador Web apasionado por transformar ideas en realidades digitales.</p>
-                    <p class="text-muted">Con formación en Web and Computer Programming por BYU-Idaho, combino técnica y
-                        estrategia para que tu negocio crezca en la web.</p>
+                    <p class="lead mb-4" data-i18n="about.lead">Desarrollador Web apasionado por transformar ideas en
+                        realidades digitales.</p>
+                    <p class="text-muted" data-i18n="about.text">Con formación en Web and Computer Programming por
+                        BYU-Idaho, combino técnica y estrategia para que tu negocio crezca en la web.</p>
                     <div class="row mt-4">
-                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Desarrollo
-                            Responsive</div>
-                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Optimización SEO
+                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <span
+                                data-i18n="about.responsive">Desarrollo Responsive</span></div>
+                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <span
+                                data-i18n="about.seo">Optimización SEO</span>
                         </div>
-                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Integración AI
+                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <span
+                                data-i18n="about.ai">Integración AI</span>
                         </div>
-                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Soporte Continuo
+                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <span
+                                data-i18n="about.support">Soporte Continuo</span>
                         </div>
                     </div>
                     <div class="mt-4">
@@ -288,55 +323,71 @@
     <section class="pricing py-5" id="precios">
         <div class="container py-5">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3">Planes y Precios</h2>
-                <p class="text-muted mx-auto max-600">Inversión transparente adaptada a tus necesidades. Precios para el
-                    mercado local e internacional.</p>
+                <h2 class="display-5 fw-bold mb-3" data-i18n="pricing.title">Planes y Precios</h2>
+                <p class="text-muted mx-auto max-600" data-i18n="pricing.subtitle">Inversión transparente adaptada a
+                    tus necesidades. Precios para el mercado local e internacional.</p>
             </div>
             <div class="row g-4 justify-content-center">
                 <!-- Landing Plan -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-card p-5 h-100 shadow-sm border-0 rounded-4">
                         <div class="mb-4">
-                            <span class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3">Ideal
-                                Profesionales</span>
-                            <h3>Plan Landing</h3>
-                            <p class="text-muted small">Tu primera presencia en internet.</p>
+                            <span
+                                class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3"
+                                data-i18n="pricing.landing.badge">Ideal Profesionales</span>
+                            <h3 data-i18n="pricing.landing.name">Plan Landing</h3>
+                            <p class="text-muted small" data-i18n="pricing.landing.desc">Tu primera presencia en
+                                internet.</p>
                         </div>
                         <div class="price mb-4">
                             <h2 class="fw-bold mb-0">1.200.000 <span class="fs-6 fw-normal">Gs.</span></h2>
-                            <p class="text-primary fw-bold mb-0">ó $180 USD</p>
+                            <p class="text-primary fw-bold mb-0" data-i18n="pricing.landing.or">ó $180 USD</p>
                         </div>
                         <ul class="list-unstyled mb-5">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Una sola página (Landing)
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.landing.f1">Una sola página (Landing)</span>
                             </li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Diseño Responsive</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Formulario de Contacto</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Optimización SEO Básica</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> 1 semana de entrega</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.landing.f2">Diseño Responsive</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.landing.f3">Formulario de Contacto</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.landing.f4">Optimización SEO Básica</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.landing.f5">1 semana de entrega</span></li>
                         </ul>
-                        <a href="#contacto" class="btn btn-outline-primary w-100 py-3">Elegir Plan</a>
+                        <a href="#contacto" class="btn btn-outline-primary w-100 py-3"
+                            data-i18n="pricing.landing.cta">Elegir Plan</a>
                     </div>
                 </div>
                 <!-- Business Plan -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="pricing-card p-5 h-100 shadow-lg border-primary rounded-4 featured">
                         <div class="mb-4">
-                            <span class="badge bg-primary text-white px-3 py-2 rounded-pill mb-3">Más Popular</span>
-                            <h3>Plan Empresa</h3>
-                            <p class="text-muted small">Para Pymes que buscan crecer.</p>
+                            <span class="badge bg-primary text-white px-3 py-2 rounded-pill mb-3"
+                                data-i18n="pricing.business.badge">Más Popular</span>
+                            <h3 data-i18n="pricing.business.name">Plan Empresa</h3>
+                            <p class="text-muted small" data-i18n="pricing.business.desc">Para Pymes que buscan crecer.
+                            </p>
                         </div>
                         <div class="price mb-4">
                             <h2 class="fw-bold mb-0">2.800.000 <span class="fs-6 fw-normal">Gs.</span></h2>
-                            <p class="text-primary fw-bold mb-0">ó $400 USD</p>
+                            <p class="text-primary fw-bold mb-0" data-i18n="pricing.business.or">ó $400 USD</p>
                         </div>
                         <ul class="list-unstyled mb-5">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Hasta 5 secciones</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Blog o Portafolio</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Multi-idioma (Opcional)</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> SEO Avanzado</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> 2-3 semanas de entrega</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.business.f1">Hasta 5 secciones</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.business.f2">Blog o Portafolio</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.business.f3">Multi-idioma (Opcional)</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.business.f4">SEO Avanzado</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.business.f5">2-3 semanas de entrega</span></li>
                         </ul>
-                        <a href="#contacto" class="btn btn-primary w-100 py-3">Elegir Plan</a>
+                        <a href="#contacto" class="btn btn-primary w-100 py-3"
+                            data-i18n="pricing.business.cta">Elegir Plan</a>
                     </div>
                 </div>
                 <!-- Custom Plan -->
@@ -344,24 +395,30 @@
                     <div class="pricing-card p-5 h-100 shadow-sm border-0 rounded-4">
                         <div class="mb-4">
                             <span
-                                class="badge bg-secondary-subtle text-secondary px-3 py-2 rounded-pill mb-3">E-commerce
-                                / Apps</span>
-                            <h3>A Medida</h3>
-                            <p class="text-muted small">Sistemas complejos y tiendas.</p>
+                                class="badge bg-secondary-subtle text-secondary px-3 py-2 rounded-pill mb-3"
+                                data-i18n="pricing.custom.badge">E-commerce / Apps</span>
+                            <h3 data-i18n="pricing.custom.name">A Medida</h3>
+                            <p class="text-muted small" data-i18n="pricing.custom.desc">Sistemas complejos y tiendas.
+                            </p>
                         </div>
                         <div class="price mb-4">
-                            <h2 class="fw-bold mb-0">Consultar</h2>
-                            <p class="text-primary fw-bold mb-0">Desde $800 USD</p>
+                            <h2 class="fw-bold mb-0" data-i18n="pricing.custom.price">Consultar</h2>
+                            <p class="text-primary fw-bold mb-0" data-i18n="pricing.custom.from">Desde $800 USD</p>
                         </div>
                         <ul class="list-unstyled mb-5">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Tienda Online Completa</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Base de Datos Dinámica</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Panel de Administración</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Integración de Pagos</li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Tiempo según proyecto</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.custom.f1">Tienda Online Completa</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.custom.f2">Base de Datos Dinámica</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.custom.f3">Panel de Administración</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.custom.f4">Integración de Pagos</span></li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
+                                    data-i18n="pricing.custom.f5">Tiempo según proyecto</span></li>
                         </ul>
                         <a href="https://wa.me/595983835222" class="btn btn-outline-primary w-100 py-3"
-                            target="_blank">Consultar WhatsApp</a>
+                            target="_blank" data-i18n="pricing.custom.cta">Consultar WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -372,9 +429,9 @@
     <section class="faq py-5 bg-light" id="faq">
         <div class="container py-5">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3">Preguntas Frecuentes</h2>
-                <p class="text-muted mx-auto max-600">Resolvemos tus dudas principales para que empieces tu proyecto con
-                    total claridad.</p>
+                <h2 class="display-5 fw-bold mb-3" data-i18n="faq.title">Preguntas Frecuentes</h2>
+                <p class="text-muted mx-auto max-600" data-i18n="faq.subtitle">Resolvemos tus dudas principales para
+                    que empieces tu proyecto con total claridad.</p>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8" data-aos="fade-up">
@@ -382,12 +439,12 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq-1">
+                                    data-bs-target="#faq-1" data-i18n="faq.q1">
                                     ¿Cuánto tiempo toma desarrollar un sitio web?
                                 </button>
                             </h2>
                             <div id="faq-1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
+                                <div class="accordion-body text-muted" data-i18n="faq.a1">
                                     Depende de la complejidad. Una web profesional (Landing Page) suele tomar entre 1 a
                                     2 semanas. Proyectos más grandes como tiendas online o sistemas a medida pueden
                                     tomar de 3 a 5 semanas.
@@ -397,26 +454,26 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq-2">
+                                    data-bs-toggle="collapse" data-bs-target="#faq-2" data-i18n="faq.q2">
                                     ¿Mi sitio web será compatible con celulares?
                                 </button>
                             </h2>
                             <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
-                                    ¡Totalmente! Todos mis desarrollos son **Responsive Design**, lo que significa que
-                                    se adaptan perfectamente a smartphones, tablets y computadoras.
+                                <div class="accordion-body text-muted" data-i18n-html="faq.a2">
+                                    ¡Totalmente! Todos mis desarrollos son <strong>Responsive Design</strong>, lo que
+                                    significa que se adaptan perfectamente a smartphones, tablets y computadoras.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq-3">
+                                    data-bs-toggle="collapse" data-bs-target="#faq-3" data-i18n="faq.q3">
                                     ¿Incluyen optimización para Google (SEO)?
                                 </button>
                             </h2>
                             <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
+                                <div class="accordion-body text-muted" data-i18n="faq.a3">
                                     Sí, utilizo prácticas de código limpio y etiquetas semánticas para que tu sitio sea
                                     fácilmente indexable por Google, mejorando tu visibilidad en las búsquedas.
                                 </div>
@@ -425,12 +482,12 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq-4">
+                                    data-bs-toggle="collapse" data-bs-target="#faq-4" data-i18n="faq.q4">
                                     ¿Necesito pagar mantenimiento mensual?
                                 </button>
                             </h2>
                             <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted">
+                                <div class="accordion-body text-muted" data-i18n="faq.a4">
                                     No obligatoriamente. Una vez entregada la web, es tuya. Sin embargo, ofrezco planes
                                     de soporte opcionales para actualizaciones, seguridad y mejoras continuas.
                                 </div>
@@ -449,45 +506,50 @@
                 <div class="col-lg-8">
                     <div class="contact-card p-5 shadow-lg rounded-4" data-aos="flip-up">
                         <div class="text-center mb-5">
-                            <h2 class="display-6 fw-bold">¿Listo para empezar?</h2>
-                            <p class="text-muted">Cuéntame sobre tu proyecto y trabajemos juntos.</p>
+                            <h2 class="display-6 fw-bold" data-i18n="contact.title">¿Listo para empezar?</h2>
+                            <p class="text-muted" data-i18n="contact.subtitle">Cuéntame sobre tu proyecto y trabajemos
+                                juntos.</p>
                         </div>
                         <form id="contactForm">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="name" placeholder="Tu Nombre"
-                                            required>
-                                        <label for="name">Tu Nombre</label>
+                                        <input type="text" class="form-control" id="name"
+                                            placeholder="Tu Nombre" data-i18n-placeholder="contact.name" required>
+                                        <label for="name" data-i18n="contact.name">Tu Nombre</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3">
                                         <input type="email" class="form-control" id="email" placeholder="Email"
-                                            required>
-                                        <label for="email">Tu Correo</label>
+                                            data-i18n-placeholder="contact.emailPlaceholder" required>
+                                        <label for="email" data-i18n="contact.email">Tu Correo</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating mb-3">
                                         <textarea class="form-control" placeholder="Mensaje" id="message"
-                                            style="height: 150px" required></textarea>
-                                        <label for="message">Cuéntame sobre tu proyecto</label>
+                                            style="height: 150px" data-i18n-placeholder="contact.messagePlaceholder"
+                                            required></textarea>
+                                        <label for="message" data-i18n="contact.messageLabel">Cuéntame sobre tu
+                                            proyecto</label>
                                     </div>
                                 </div>
                                 <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3">Enviar
-                                        Mensaje</button>
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3"
+                                        data-i18n="contact.submit">Enviar Mensaje</button>
                                 </div>
                                 <div class="col-12 text-center mt-4">
-                                    <p class="mb-0">O contáctame directamente:</p>
+                                    <p class="mb-0" data-i18n="contact.direct">O contáctame directamente:</p>
                                     <div class="mt-2">
                                         <a href="https://wa.me/595983835222"
                                             class="text-decoration-none fw-bold me-3"><img src="images/whatsapp.jpg"
-                                                alt="Whatsapp image icon" width="50" height="50"></a>
+                                                alt="Whatsapp image icon" data-i18n-alt="contact.waAlt" width="50"
+                                                height="50"></a>
                                         <a href="mailto:estigarribiaweb@gmail.com"
                                             class="text-decoration-none fw-bold"><img src="images/email.png"
-                                                alt="Email image icon" width="50" height="50"></a>
+                                                alt="Email image icon" data-i18n-alt="contact.emailAlt" width="50"
+                                                height="50"></a>
                                     </div>
                                 </div>
                             </div>
@@ -501,10 +563,12 @@
     <!-- Footer -->
     <footer class="py-4 bg-dark text-white text-center">
         <div class="container">
-            <p class="mb-0">&copy; 2026 Luis Estigarribia. Todos los derechos reservados.</p>
+            <p class="mb-0" data-i18n="footer.rights">&copy; 2026 Luis Estigarribia. Todos los derechos reservados.</p>
             <div class="mt-2">
-                <a href="privacy.html" class="text-white opacity-75 me-3 text-decoration-none">Privacidad</a>
-                <a href="terms.html" class="text-white opacity-75 text-decoration-none">Términos</a>
+                <a href="privacy.html" class="text-white opacity-75 me-3 text-decoration-none"
+                    data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" class="text-white opacity-75 text-decoration-none"
+                    data-i18n="footer.terms">Términos</a>
             </div>
         </div>
     </footer>
@@ -513,6 +577,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- i18n JS -->
+    <script src="js/i18n.js"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
 </body>

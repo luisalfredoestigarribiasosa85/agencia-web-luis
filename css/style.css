@@ -93,6 +93,32 @@ section { padding: 5.5rem 0; }
 }
 .nav-link:hover { color: var(--oro) !important; }
 
+/* ---- Selector de idioma ---- */
+.lang-toggle { display: inline-flex; align-items: center; gap: 0.35rem; }
+.navbar .dropdown-menu {
+  background: #14120e;
+  border: 1px solid rgba(198, 166, 100, 0.35);
+  border-radius: 12px;
+  padding: 0.5rem;
+  min-width: 10rem;
+  margin-top: 0.5rem;
+  box-shadow: none;
+}
+.navbar .dropdown-menu .dropdown-item {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
+}
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+  background: rgba(198, 166, 100, 0.15);
+  color: var(--oro);
+}
+.navbar .dropdown-menu .dropdown-item:active { background: var(--oro); color: #000; }
+.navbar .dropdown-menu .dropdown-item:focus { outline: 2px solid var(--oro); outline-offset: 1px; }
+
 /* ---- Botones ---- */
 .btn { border-radius: 999px; font-weight: 600; font-size: 0.95rem; }
 .btn-primary, .btn-contact {

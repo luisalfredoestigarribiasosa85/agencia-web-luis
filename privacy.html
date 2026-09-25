@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad | Luis Dev</title>
+    <title data-i18n-title="privacy.title">Política de Privacidad | Luis Dev</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -39,44 +40,54 @@
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">LUIS<span>.DEV</span></a>
-            <a href="index.html" class="btn btn-outline-primary btn-sm">Volver al inicio</a>
+            <div class="dropdown ms-auto me-3">
+                <a class="btn btn-outline-primary btn-sm dropdown-toggle lang-toggle" href="#" id="langDropdown"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-globe me-1"></i><span id="langLabel">Español</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                    <li><button class="dropdown-item" data-lang="es">Español</button></li>
+                    <li><button class="dropdown-item" data-lang="en">English</button></li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn btn-outline-primary btn-sm" data-i18n="legal.back">Volver al inicio</a>
         </div>
     </nav>
 
     <div class="container legal-content">
-        <h1 class="display-5 fw-bold">Política de Privacidad</h1>
-        <p class="text-muted">Última actualización: 11 de enero de 2026</p>
+        <h1 class="display-5 fw-bold" data-i18n="privacy.h1">Política de Privacidad</h1>
+        <p class="text-muted" data-i18n="privacy.updated">Última actualización: 11 de enero de 2026</p>
 
         <section>
-            <h2>1. Información que Recolectamos</h2>
-            <p>En Luis Dev, la privacidad de nuestros visitantes es de extrema importancia. A través de nuestro
-                formulario de contacto, recolectamos:</p>
+            <h2 data-i18n="privacy.s1.h">1. Información que Recolectamos</h2>
+            <p data-i18n="privacy.s1.p">En Luis Dev, la privacidad de nuestros visitantes es de extrema importancia. A
+                través de nuestro formulario de contacto, recolectamos:</p>
             <ul>
-                <li>Nombre</li>
-                <li>Dirección de correo electrónico</li>
-                <li>Mensaje y detalles del proyecto</li>
+                <li data-i18n="privacy.s1.li1">Nombre</li>
+                <li data-i18n="privacy.s1.li2">Dirección de correo electrónico</li>
+                <li data-i18n="privacy.s1.li3">Mensaje y detalles del proyecto</li>
             </ul>
         </section>
 
         <section>
-            <h2>2. Uso de la Información</h2>
-            <p>La información recopilada se utiliza exclusivamente para:</p>
+            <h2 data-i18n="privacy.s2.h">2. Uso de la Información</h2>
+            <p data-i18n="privacy.s2.p">La información recopilada se utiliza exclusivamente para:</p>
             <ul>
-                <li>Responder a sus consultas de servicios.</li>
-                <li>Proporcionar cotizaciones y asesoría en desarrollo web.</li>
-                <li>Mantener una comunicación fluida durante el proceso del proyecto.</li>
+                <li data-i18n="privacy.s2.li1">Responder a sus consultas de servicios.</li>
+                <li data-i18n="privacy.s2.li2">Proporcionar cotizaciones y asesoría en desarrollo web.</li>
+                <li data-i18n="privacy.s2.li3">Mantener una comunicación fluida durante el proceso del proyecto.</li>
             </ul>
         </section>
 
         <section>
-            <h2>3. Protección de Datos</h2>
-            <p>No compartimos, vendemos ni alquilamos su información personal a terceros. Sus datos son procesados de
-                forma segura a través de nuestros sistemas internos (Resend/Gmail).</p>
+            <h2 data-i18n="privacy.s3.h">3. Protección de Datos</h2>
+            <p data-i18n="privacy.s3.p">No compartimos, vendemos ni alquilamos su información personal a terceros. Sus
+                datos son procesados de forma segura a través de nuestros sistemas internos (Resend/Gmail).</p>
         </section>
 
         <section>
-            <h2>4. Contacto</h2>
-            <p>Si tiene preguntas sobre esta política, puede contactarnos en: <br>
+            <h2 data-i18n="privacy.s4.h">4. Contacto</h2>
+            <p><span data-i18n="privacy.s4.p">Si tiene preguntas sobre esta política, puede contactarnos en:</span> <br>
                 <strong>Email:</strong> estigarribialuis95@gmail.com <br>
                 <strong>WhatsApp:</strong> +595 982 909 893
             </p>
@@ -85,9 +96,12 @@
 
     <footer class="py-4 bg-dark text-white text-center mt-5">
         <div class="container">
-            <p class="mb-0">&copy; 2026 Luis Estigarribia. Todos los derechos reservados.</p>
+            <p class="mb-0" data-i18n="footer.rights">&copy; 2026 Luis Estigarribia. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/i18n.js"></script>
 </body>
 
 </html>

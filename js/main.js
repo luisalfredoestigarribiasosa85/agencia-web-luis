@@ -19,7 +19,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not([data-bs-toggle="dropdown"])').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
@@ -55,7 +55,7 @@ if (contactForm) {
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerText;
         submitBtn.disabled = true;
-        submitBtn.innerText = 'Enviando...';
+        submitBtn.innerText = I18n.t('contact.sending');
 
         try {
             // This will be connected to the server.js later
@@ -68,15 +68,15 @@ if (contactForm) {
             });
 
             if (response.ok) {
-                alert('¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.');
+                alert(I18n.t('form.success'));
                 contactForm.reset();
             } else {
-                alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo o contáctame por WhatsApp.');
+                alert(I18n.t('form.error'));
             }
         } catch (error) {
             console.error('Error:', error);
             // Fallback alert for local testing if server is not running
-            alert('Mensaje simulado enviado con éxito (El servidor Node.js se configurará a continuación).');
+            alert(I18n.t('form.fallback'));
             contactForm.reset();
         } finally {
             submitBtn.disabled = false;
