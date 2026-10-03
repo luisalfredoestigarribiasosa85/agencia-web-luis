@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n-title="meta.title">Luis Estigarribia | Agencia de Desarrollo Web</title>
+    <title data-i18n-title="meta.title">Estigarribia Web | Páginas web profesionales para negocios</title>
     <!-- Meta tags for SEO -->
     <meta name="description" data-i18n-meta-description="meta.description"
-        content="Luis Estigarribia - Especialista en desarrollo web para profesionales, agencias y empresas. Creación de sitios web modernos y optimizados.">
+        content="Páginas web profesionales para negocios y emprendedores. Landing pages desde ₲599.000. Mostrá tus servicios, generá confianza y recibí consultas por WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Estigarribia Web | Páginas web profesionales para negocios">
+    <meta property="og:description"
+        content="Páginas web profesionales para negocios y emprendedores. Landing pages desde ₲599.000.">
+    <meta property="og:image" content="images/ew.jpg">
+    <meta name="theme-color" content="#06102a">
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
         rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,37 +25,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- AOS (Animate On Scroll) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/jpeg" href="images/ew.jpg">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Estigarribia Web" />
+    <link rel="manifest" href="images/site.webmanifest" />
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="mainNav">
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                <img class="logo-ew" src="images/ew.jpg" alt="Logo" width="90" />
+            <a class="navbar-brand" href="index.html">
+                <img class="logo-ew" src="images/ew.jpg" data-i18n-alt="brand.alt"
+                    alt="Estigarribia Web — Páginas web para tu negocio" width="52" height="52" />
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-label="Menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto text-uppercase">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item"><a class="nav-link px-lg-3" href="#hero" data-i18n="nav.home">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#servicios"
-                            data-i18n="nav.services">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3" href="#portafolio"
-                            data-i18n="nav.portfolio">Portafolio</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#proceso"
-                            data-i18n="nav.process">Mi Proceso</a></li>
+                            data-i18n="nav.works">Trabajos</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#incluye"
+                            data-i18n="nav.include">Qué incluye</a></li>
                     <li class="nav-item"><a class="nav-link px-lg-3" href="#precios"
                             data-i18n="nav.pricing">Precios</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#faq" data-i18n="nav.faq">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link px-lg-3" href="#sobre-mi"
-                            data-i18n="nav.about">Sobre Mí</a></li>
-                    <li class="nav-item dropdown ms-lg-3">
+                    <li class="nav-item"><a class="nav-link px-lg-3" href="#proceso"
+                            data-i18n="nav.process">Proceso</a></li>
+                    <li class="nav-item dropdown ms-lg-2">
                         <a class="nav-link dropdown-toggle lang-toggle" href="#" id="langDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-globe me-1"></i><span id="langLabel">Español</span>
@@ -58,386 +66,383 @@
                             <li><button class="dropdown-item" data-lang="en">English</button></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link px-lg-3 btn-contact ms-lg-3" href="#contacto"
-                            data-i18n="nav.contact">Contacto</a>
+                    <li class="nav-item ms-lg-3">
+                        <a class="cta cta-primary cta-sm"
+                            href="https://wa.me/595983835222?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20consultar%20sobre%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero d-flex align-items-center" id="hero">
-        <div class="container">
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-ring" aria-hidden="true"></div>
+        <div class="container position-relative">
             <div class="row align-items-center">
-                <div class="col-lg-7" data-aos="fade-right">
-                    <h5 class="text-primary fw-bold text-uppercase mb-3" data-i18n="hero.kicker">Impulsando tu Negocio
-                        Digital</h5>
-                    <h1 class="display-3 fw-extra-bold mb-4" data-i18n-html="hero.title">Soluciones Web Pro para <span
-                            class="highlight">Gente Visionaria.</span></h1>
-                    <p class="lead text-muted mb-5" data-i18n="hero.subtitle">Soy Luis Estigarribia, ayudo a
-                        profesionales independientes, empresas y restaurantes a marcar su presencia online con sitios
-                        web de alto impacto.</p>
-                    <div class="hero-btns">
-                        <a href="#contacto" class="btn btn-primary btn-lg px-5 py-3 me-3 mb-3"
-                            data-i18n="hero.cta">Empezar Proyecto</a>
-                        <a href="https://wa.me/595983835222" class="btn btn-outline-primary btn-lg px-5 py-3 mb-3"
-                            target="_blank">
-                            <i class="fab fa-whatsapp me-2"></i> WhatsApp
+                <div class="col-lg-7">
+                    <h1 data-i18n-html="hero.title">Tu negocio merece una presencia profesional en Internet.</h1>
+                    <p class="lead" data-i18n="hero.subtitle">Creo páginas web profesionales para negocios y
+                        emprendedores, pensadas para mostrar tus servicios, generar confianza y facilitar el contacto
+                        con tus clientes.</p>
+                    <p class="hero-price">
+                        <span class="from" data-i18n="hero.from">Landing pages desde</span>
+                        <span class="amount">₲599.000</span>
+                    </p>
+                    <div class="hero-ctas">
+                        <a class="cta cta-primary"
+                            href="https://wa.me/595983835222?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20consultar%20sobre%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> <span data-i18n="hero.cta">Quiero mi página web</span>
+                        </a>
+                        <a class="cta cta-ghost" href="#portafolio" data-i18n="hero.secondary">Ver trabajos</a>
+                    </div>
+                    <p class="hero-note" data-i18n="hero.note">Te respondo por WhatsApp y vemos qué tipo de página
+                        necesita tu negocio.</p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="offer">
+                        <h2 data-i18n="offer.title">Para empezar: la landing inicial</h2>
+                        <p data-i18n="offer.text">Una página clara y profesional con lo esencial de tu negocio.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span data-i18n="offer.i1">Diseño a medida de tu
+                                    negocio</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="offer.i2">Se ve bien en celular, tablet
+                                    y computadora</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="offer.i3">Botón directo a tu
+                                    WhatsApp</span></li>
+                            <li><i class="fas fa-check"></i> <span data-i18n="offer.i4">Publicación y configuración
+                                    inicial incluidas</span></li>
+                        </ul>
+                        <a class="cta cta-primary cta-block"
+                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20negocio."
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> <span data-i18n="offer.cta">Consultar por WhatsApp</span>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-5 text-center mt-5 mt-lg-0" data-aos="zoom-in">
-                    <div class="hero-img-wrapper">
-                        <!-- We can add a profile image or a high-quality illustration here -->
-                        <div class="p-4">
-                            <i class="fas fa-code fa-5x text-primary mb-3"></i>
-                            <h4 class="text-primary" data-i18n="hero.cardTitle">Desarrollo a Medida</h4>
-                            <p class="small text-dark">HTML • Bootstrap • JS • Node.js • Ruby on Rails</p>
-                        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema / Solución -->
+    <section id="problema">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title" data-i18n="problems.title">¿Te pasa alguna de estas cosas?</h2>
+            </div>
+            <ul class="problem-list">
+                <li data-i18n="problems.p1">¿Tus clientes siempre te preguntan lo mismo por WhatsApp?</li>
+                <li data-i18n="problems.p2">¿No tenés un lugar donde mostrar todos tus servicios?</li>
+                <li data-i18n="problems.p3">¿Tu negocio depende solamente de Instagram o Facebook?</li>
+                <li data-i18n="problems.p4">¿Cuando alguien busca tu negocio, qué encuentra?</li>
+            </ul>
+            <div class="solution">
+                <p data-i18n="solution.text">Una página web reúne toda esa información en un solo lugar.</p>
+                <a class="text-link" href="#incluye" data-i18n="solution.link">Ver qué incluye</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trabajos -->
+    <section class="works" id="portafolio">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title" data-i18n="portfolio.title">Trabajos que ya están en Internet</h2>
+                <p class="section-sub" data-i18n="portfolio.subtitle">Páginas reales, funcionando hoy. Así puede verse
+                    la de tu negocio.</p>
+            </div>
+
+            <article class="work">
+                <span class="work-type" data-i18n="work.barber.type">Barbería</span>
+                <h3>BarberShop <span class="live" data-i18n="portfolio.live">En vivo</span></h3>
+                <p data-i18n="portfolio.barbershop.desc">Sitio Web demo para Barberías, incluye servicios, galeria de
+                    imagenes, ubicación del local, boton de Whatsapp y más.</p>
+                <div class="work-links">
+                    <a class="cta cta-outline cta-sm" href="https://luisalfredoestigarribiasosa85.github.io/barbershop/"
+                        target="_blank" rel="noopener">
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.view">Ver proyecto</span>
+                    </a>
+                    <a class="cta cta-primary cta-sm"
+                        href="https://wa.me/595983835222?text=Hola%2C%20vi%20el%20trabajo%20de%20BarberShop%20en%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio."
+                        target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="work.similar">Quiero algo así</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="work">
+                <span class="work-type" data-i18n="work.aura.type">Peluquería</span>
+                <h3>Aura Beauty Studio <span class="live" data-i18n="portfolio.live">En vivo</span></h3>
+                <p data-i18n="portfolio.aura.desc">Sitio Web demo para Peluquerías, incluye servicios, galeria de
+                    imagenes, ubicación del local, boton de Whatsapp y más.</p>
+                <div class="work-links">
+                    <a class="cta cta-outline cta-sm"
+                        href="https://luisalfredoestigarribiasosa85.github.io/peluqueria-fem/" target="_blank"
+                        rel="noopener">
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.view">Ver proyecto</span>
+                    </a>
+                    <a class="cta cta-primary cta-sm"
+                        href="https://wa.me/595983835222?text=Hola%2C%20vi%20el%20trabajo%20de%20Aura%20Beauty%20Studio%20en%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio."
+                        target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="work.similar">Quiero algo así</span>
+                    </a>
+                </div>
+            </article>
+
+            <article class="work">
+                <span class="work-type" data-i18n="work.luna.type">Spa de uñas</span>
+                <h3>Luna Nails <span class="live" data-i18n="portfolio.live">En vivo</span></h3>
+                <p data-i18n="portfolio.lunanails.desc">Un sitio web moderno y profesional para Spa de Uñas, con una
+                    interfaz fácil de usar y una experiencia de usuario excelente.</p>
+                <div class="work-links">
+                    <a class="cta cta-outline cta-sm"
+                        href="https://luisalfredoestigarribiasosa85.github.io/luna-nails/" target="_blank"
+                        rel="noopener">
+                        <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.view">Ver proyecto</span>
+                    </a>
+                    <a class="cta cta-primary cta-sm"
+                        href="https://wa.me/595983835222?text=Hola%2C%20vi%20el%20trabajo%20de%20Luna%20Nails%20en%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio."
+                        target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="work.similar">Quiero algo así</span>
+                    </a>
+                </div>
+            </article>
+
+            <p class="works-more">
+                <a class="text-link" href="https://portfolio-luis-estigarribia.vercel.app/" target="_blank"
+                    rel="noopener" data-i18n="portfolio.more">Ver más proyectos en mi portafolio personal</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Qué incluye -->
+    <section id="incluye">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-head include-side">
+                        <h2 class="section-title" data-i18n="include.title">Qué recibe tu negocio</h2>
+                        <p class="section-sub" data-i18n="include.text">Todo lo que necesita un negocio para
+                            presentarse bien en Internet y que te contacten sin vueltas.</p>
+                        <a class="cta cta-primary"
+                            href="https://wa.me/595983835222?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20consultar%20sobre%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> <span data-i18n="include.cta">Pedir la mía</span>
+                        </a>
                     </div>
+                </div>
+                <div class="col-lg-7">
+                    <ul class="include-list">
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i1">Diseño profesional
+                                personalizado</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i2">Adaptado a celulares, tablets y
+                                computadora</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i3">Presentación clara de tu
+                                negocio</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i4">Tus servicios y precios a la
+                                vista</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i5">Galería de imágenes</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i6">Ubicación de tu local</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i7">Información de contacto</span>
+                        </li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i8">Botón directo a tu
+                                WhatsApp</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i9">Enlaces a tus redes
+                                sociales</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i10">Publicación de la página</span>
+                        </li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="include.i11">Configuración inicial lista
+                                para usar</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services py-5" id="servicios">
-        <div class="container py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3" data-i18n="services.title">Mis Servicios</h2>
-                <p class="text-muted mx-auto max-600" data-i18n="services.subtitle">Diseño y desarrollo enfocado en
-                    resultados. Tu sitio web será rápido, responsive y listo para atraer clientes.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card text-center p-5 shadow-sm h-100">
-                        <div class="icon-box mb-4"><i class="fas fa-user-tie"></i></div>
-                        <h3 data-i18n="services.professionals">Profesionales</h3>
-                        <p class="text-muted" data-i18n="services.professionals.desc">Portafolios y sitios personales
-                            para destacar tu marca personal en el mercado.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card text-center p-5 shadow-sm h-100 highlight-card">
-                        <div class="icon-box mb-4 text-white"><i class="fas fa-utensils"></i></div>
-                        <h3 data-i18n="services.restaurants">Restaurantes</h3>
-                        <p class="text-muted" data-i18n="services.restaurants.desc">Menús digitales interactivos y
-                            sistemas de reserva elegantes para tu negocio gastronómico.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card text-center p-5 shadow-sm h-100">
-                        <div class="icon-box mb-4"><i class="fas fa-building"></i></div>
-                        <h3 data-i18n="services.smb">Pymes & Agencias</h3>
-                        <p class="text-muted" data-i18n="services.smb.desc">Soluciones corporativas que transmiten
-                            confianza y profesionalismo a gran escala.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Para quién -->
+    <section class="who on-dark">
+        <div class="container">
+            <h2 data-i18n="who.title">Si tenés un negocio, esto es para vos</h2>
+            <ul class="who-list">
+                <li data-i18n="who.b1">Barberías</li>
+                <li data-i18n="who.b2">Peluquerías</li>
+                <li data-i18n="who.b3">Restaurantes</li>
+                <li data-i18n="who.b4">Comercios</li>
+                <li data-i18n="who.b5">Emprendedores</li>
+                <li data-i18n="who.b6">Profesionales independientes</li>
+                <li data-i18n="who.b7">Servicios locales</li>
+                <li data-i18n="who.b8">Pequeñas empresas</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio py-5 bg-white" id="portafolio">
-        <div class="container py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3" data-i18n="portfolio.title">Portafolio de Proyectos</h2>
-                <p class="text-muted mx-auto max-600" data-i18n="portfolio.subtitle">Soluciones digitales reales que
-                    demuestran nuestra capacidad técnica y enfoque en resultados.</p>
+    <!-- Proceso -->
+    <section id="proceso">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title" data-i18n="process.title">Cómo trabajamos</h2>
+                <p class="section-sub" data-i18n="process.subtitle">Un camino simple, sin tecnicismos: vos contás,
+                    yo me encargo del resto.</p>
             </div>
-            <div class="row g-4">
-                <!-- Project 1: Vendelo -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="portfolio-card rounded-4 overflow-hidden shadow-sm h-100">
-                        <div class="portfolio-content p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <h3 class="h4 fw-bold">BarberShop</h3>
-                                <span class="badge bg-primary" data-i18n="portfolio.live">En Vivo</span>
-                            </div>
-                            <p class="text-muted small" data-i18n="portfolio.barbershop.desc">Sitio Web demo para
-                                Barberías, incluye servicios, galeria de imagenes, ubicación del local, boton de
-                                Whatsapp y más.</p>
-                            <div class="tech-stack mb-4">
-                                <span class="badge bg-light text-dark border me-1">HTML</span>
-                                <span class="badge bg-light text-dark border me-1">CSS</span>
-                                <span class="badge bg-light text-dark border me-1">Javascript</span>
-                            </div>
-                            <a href="https://luisalfredoestigarribiasosa85.github.io/barbershop/" target="_blank"
-                                class="btn btn-outline-primary btn-sm w-100">
-                                <i class="fas fa-external-link-alt me-2"></i> <span
-                                    data-i18n="portfolio.view">Ver Proyecto</span>
-                            </a>
-                        </div>
+            <ol class="steps">
+                <li>
+                    <span class="step-num" aria-hidden="true">01</span>
+                    <div>
+                        <h3 data-i18n="process.s1">Me contás sobre tu negocio</h3>
+                        <p data-i18n="process.d1">Me escribís por WhatsApp y me contás qué hacés y qué querés mostrar.
+                        </p>
                     </div>
-                </div>
-                <!-- Project 2: Vestiventa -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="portfolio-card rounded-4 overflow-hidden shadow-sm h-100">
-                        <div class="portfolio-content p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <h3 class="h4 fw-bold">Aura Beauty Studio</h3>
-                                <span class="badge bg-primary" data-i18n="portfolio.live">En Vivo</span>
-                            </div>
-                            <p class="text-muted small" data-i18n="portfolio.aura.desc">Sitio Web demo para
-                                Peluquerías, incluye servicios, galeria de imagenes, ubicación del local, boton de
-                                Whatsapp y más.</p>
-                            <div class="tech-stack mb-4">
-                                <span class="badge bg-light text-dark border me-1">HTML</span>
-                                <span class="badge bg-light text-dark border me-1">CSS</span>
-                                <span class="badge bg-light text-dark border">Javascript</span>
-                            </div>
-                            <a href="https://luisalfredoestigarribiasosa85.github.io/peluqueria-fem/"
-                                target="_blank"
-                                class="btn btn-outline-primary btn-sm w-100">
-                                <i class="fas fa-external-link-alt me-2"></i> <span
-                                    data-i18n="portfolio.view">Ver Proyecto</span>
-                            </a>
-                        </div>
+                </li>
+                <li>
+                    <span class="step-num" aria-hidden="true">02</span>
+                    <div>
+                        <h3 data-i18n="process.s2">Definimos qué necesitás</h3>
+                        <p data-i18n="process.d2">Vemos juntos qué tipo de página te conviene y te paso el presupuesto
+                            claro.</p>
                     </div>
-                </div>
-                <!-- Project 3: CSE341 API -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="portfolio-card rounded-4 overflow-hidden shadow-sm h-100">
-                        <div class="portfolio-content p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <h3 class="h4 fw-bold">Luna Nails</h3>
-                                <span class="badge bg-primary" data-i18n="portfolio.live">En Vivo</span>
-                            </div>
-                            <p class="text-muted small" data-i18n="portfolio.lunanails.desc">Un sitio web moderno y
-                                profesional para Spa de Uñas, con una interfaz fácil de usar y una experiencia de
-                                usuario excelente.</p>
-                            <div class="tech-stack mb-4">
-                                <span class="badge bg-light text-dark border me-1">HTML</span>
-                                <span class="badge bg-light text-dark border me-1">CSS</span>
-                                <span class="badge bg-light text-dark border">Javascript</span>
-                            </div>
-                            <a href="https://luisalfredoestigarribiasosa85.github.io/luna-nails/" target="_blank"
-                                class="btn btn-outline-primary btn-sm w-100">
-                                <i class="fas fa-external-link-alt me-2"></i> <span
-                                    data-i18n="portfolio.view">Ver Proyecto</span>
-                            </a>
-                        </div>
+                </li>
+                <li>
+                    <span class="step-num" aria-hidden="true">03</span>
+                    <div>
+                        <h3 data-i18n="process.s3">Diseño tu página</h3>
+                        <p data-i18n="process.d3">Armo el diseño con la información y las fotos de tu negocio.</p>
                     </div>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <span class="step-num" aria-hidden="true">04</span>
+                    <div>
+                        <h3 data-i18n="process.s4">Revisamos los detalles</h3>
+                        <p data-i18n="process.d4">La mirás en tu celular, me decís qué ajustar y la dejamos lista.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num" aria-hidden="true">05</span>
+                    <div>
+                        <h3 data-i18n="process.s5">Publicamos tu sitio</h3>
+                        <p data-i18n="process.d5">Tu página queda en Internet y la podés compartir donde quieras.</p>
+                    </div>
+                </li>
+            </ol>
         </div>
     </section>
 
-    <!-- Work Process Section -->
-    <section class="process py-5" id="proceso">
-        <div class="container py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3" data-i18n="process.title">Mi Proceso</h2>
-                <p class="text-muted mx-auto max-600" data-i18n="process.subtitle">Un camino claro desde la idea
-                    inicial hasta que tu sitio esté en línea y generando resultados.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="process-step text-center p-4">
-                        <div class="step-number mb-3">01</div>
-                        <div class="step-icon mb-4"><i class="fas fa-comments"></i></div>
-                        <h4 data-i18n="process.discovery">Descubrimiento</h4>
-                        <p class="text-muted small" data-i18n="process.discovery.desc">Conversamos para entender tu
-                            negocio, audiencia y metas específicas.</p>
+    <!-- Precios -->
+    <section class="pricing" id="precios">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-head price-lead">
+                        <h2 class="section-title" data-i18n="pricing.title">Precios claros</h2>
+                        <span class="from" data-i18n="pricing.from">Landing pages desde</span>
+                        <span class="amount">₲599.000</span>
+                        <p class="price-note" data-i18n="pricing.note">Precio inicial de una landing page. Si tu
+                            proyecto es más grande, lo presupuestamos aparte.</p>
+                        <a class="cta cta-primary"
+                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20negocio."
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> <span data-i18n="pricing.cta">Empezar por WhatsApp</span>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="process-step text-center p-4">
-                        <div class="step-number mb-3">02</div>
-                        <div class="step-icon mb-4"><i class="fas fa-pencil-ruler"></i></div>
-                        <h4 data-i18n="process.design">Diseño & Estrategia</h4>
-                        <p class="text-muted small" data-i18n="process.design.desc">Creamos la estructura visual y
-                            funcional enfocada en la conversión.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="process-step text-center p-4">
-                        <div class="step-number mb-3">03</div>
-                        <div class="step-icon mb-4"><i class="fas fa-laptop-code"></i></div>
-                        <h4 data-i18n="process.dev">Desarrollo</h4>
-                        <p class="text-muted small" data-i18n="process.dev.desc">Construimos tu sitio con código limpio,
-                            rápido y optimizado para SEO.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="process-step text-center p-4">
-                        <div class="step-number mb-3">04</div>
-                        <div class="step-icon mb-4"><i class="fas fa-rocket"></i></div>
-                        <h4 data-i18n="process.launch">Lanzamiento</h4>
-                        <p class="text-muted small" data-i18n="process.launch.desc">Lanzamos tu web al mundo y te
-                            brindamos soporte para que crezca.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section class="about py-5 bg-light" id="sobre-mi">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0 text-center" data-aos="fade-right">
-                    <div class="about-img-container">
-                        <i class="fas fa-laptop-code fa-10x text-primary opacity-25"></i>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <h2 class="display-5 fw-bold mb-4">Luis Estigarribia</h2>
-                    <p class="lead mb-4" data-i18n="about.lead">Desarrollador Web apasionado por transformar ideas en
-                        realidades digitales.</p>
-                    <p class="text-muted" data-i18n="about.text">Con formación en Web and Computer Programming por
-                        BYU-Idaho, combino técnica y estrategia para que tu negocio crezca en la web.</p>
-                    <div class="row mt-4">
-                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <span
-                                data-i18n="about.responsive">Desarrollo Responsive</span></div>
-                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <span
-                                data-i18n="about.seo">Optimización SEO</span>
-                        </div>
-                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <span
-                                data-i18n="about.ai">Integración AI</span>
-                        </div>
-                        <div class="col-6 mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <span
-                                data-i18n="about.support">Soporte Continuo</span>
-                        </div>
-                    </div>
-                    <div class="mt-4">
-                        <a href="https://www.linkedin.com/in/luis-estigarribia-3225591a3" target="_blank"
-                            class="text-dark me-3"><i class="fab fa-linkedin fa-2x"></i></a>
-                        <a href="mailto:estigarribiaweb@gmail.com" class="text-dark"><i
-                                class="fas fa-envelope fa-2x"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing py-5" id="precios">
-        <div class="container py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3" data-i18n="pricing.title">Planes y Precios</h2>
-                <p class="text-muted mx-auto max-600" data-i18n="pricing.subtitle">Inversión transparente adaptada a
-                    tus necesidades. Precios para el mercado local e internacional.</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <!-- Landing Plan -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="pricing-card p-5 h-100 shadow-sm border-0 rounded-4">
-                        <div class="mb-4">
-                            <span
-                                class="badge bg-primary-subtle text-primary px-3 py-2 rounded-pill mb-3"
-                                data-i18n="pricing.landing.badge">Ideal Profesionales</span>
+                <div class="col-lg-7">
+                    <div class="plan">
+                        <div class="plan-top">
                             <h3 data-i18n="pricing.landing.name">Plan Landing</h3>
-                            <p class="text-muted small" data-i18n="pricing.landing.desc">Tu primera presencia en
-                                internet.</p>
+                            <span class="plan-price">599.000 Gs. <small data-i18n="pricing.landing.or">ó 99
+                                    USD</small></span>
                         </div>
-                        <div class="price mb-4">
-                            <h2 class="fw-bold mb-0">599.000 <span class="fs-6 fw-normal">Gs.</span></h2>
-                            <p class="text-primary fw-bold mb-0" data-i18n="pricing.landing.or">ó 99 USD</p>
-                        </div>
-                        <ul class="list-unstyled mb-5">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.landing.f1">Una sola página (Landing)</span>
-                            </li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.landing.f2">Diseño Responsive</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.landing.f3">Formulario de Contacto</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.landing.f4">Optimización SEO Básica</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.landing.f5">1 semana de entrega</span></li>
+                        <p data-i18n="pricing.landing.desc">Tu primera presencia en internet.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f1">Una sola página
+                                    (Landing)</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f2">Diseño
+                                    Responsive</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f3">Formulario de
+                                    Contacto</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f4">Optimización SEO
+                                    Básica</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f5">1 semana de
+                                    entrega</span></li>
                         </ul>
-                        <a href="#contacto" class="btn btn-outline-primary w-100 py-3"
-                            data-i18n="pricing.landing.cta">Elegir Plan</a>
+                        <a class="cta cta-outline cta-sm"
+                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20negocio."
+                            target="_blank" rel="noopener" data-i18n="pricing.landing.cta">Elegir Plan</a>
                     </div>
-                </div>
-                <!-- Business Plan -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="pricing-card p-5 h-100 shadow-lg border-primary rounded-4 featured">
-                        <div class="mb-4">
-                            <span class="badge bg-primary text-white px-3 py-2 rounded-pill mb-3"
-                                data-i18n="pricing.business.badge">Más Popular</span>
+                    <div class="plan">
+                        <div class="plan-top">
                             <h3 data-i18n="pricing.business.name">Plan Empresa</h3>
-                            <p class="text-muted small" data-i18n="pricing.business.desc">Para Pymes que buscan crecer.
-                            </p>
+                            <span class="plan-price">799.000 Gs. <small data-i18n="pricing.business.or">ó 139
+                                    USD</small></span>
                         </div>
-                        <div class="price mb-4">
-                            <h2 class="fw-bold mb-0">799.000 <span class="fs-6 fw-normal">Gs.</span></h2>
-                            <p class="text-primary fw-bold mb-0" data-i18n="pricing.business.or">ó 139 USD</p>
-                        </div>
-                        <ul class="list-unstyled mb-5">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.business.f1">Hasta 5 secciones</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.business.f2">Blog o Portafolio</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.business.f3">Multi-idioma (Opcional)</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.business.f4">SEO Avanzado</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.business.f5">2-3 semanas de entrega</span></li>
+                        <p data-i18n="pricing.business.desc">Para Pymes que buscan crecer.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f1">Hasta 5
+                                    secciones</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f2">Blog o
+                                    Portafolio</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f3">Multi-idioma
+                                    (Opcional)</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f4">SEO Avanzado</span>
+                            </li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f5">2-3 semanas de
+                                    entrega</span></li>
                         </ul>
-                        <a href="#contacto" class="btn btn-primary w-100 py-3"
-                            data-i18n="pricing.business.cta">Elegir Plan</a>
+                        <a class="cta cta-outline cta-sm"
+                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20el%20Plan%20Empresa."
+                            target="_blank" rel="noopener" data-i18n="pricing.business.cta">Elegir Plan</a>
                     </div>
-                </div>
-                <!-- Custom Plan -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="pricing-card p-5 h-100 shadow-sm border-0 rounded-4">
-                        <div class="mb-4">
-                            <span
-                                class="badge bg-secondary-subtle text-secondary px-3 py-2 rounded-pill mb-3"
-                                data-i18n="pricing.custom.badge">E-commerce / Apps</span>
+                    <div class="plan">
+                        <div class="plan-top">
                             <h3 data-i18n="pricing.custom.name">A Medida</h3>
-                            <p class="text-muted small" data-i18n="pricing.custom.desc">Sistemas complejos y tiendas.
-                            </p>
+                            <span class="plan-price"><span data-i18n="pricing.custom.price">Consultar</span> <small
+                                    data-i18n="pricing.custom.from">Desde 799 USD</small></span>
                         </div>
-                        <div class="price mb-4">
-                            <h2 class="fw-bold mb-0" data-i18n="pricing.custom.price">Consultar</h2>
-                            <p class="text-primary fw-bold mb-0" data-i18n="pricing.custom.from">Desde 799 USD</p>
-                        </div>
-                        <ul class="list-unstyled mb-5">
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.custom.f1">Tienda Online Completa</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.custom.f2">Base de Datos Dinámica</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.custom.f3">Panel de Administración</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.custom.f4">Integración de Pagos</span></li>
-                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> <span
-                                    data-i18n="pricing.custom.f5">Tiempo según proyecto</span></li>
+                        <p data-i18n="pricing.custom.desc">Sistemas complejos y tiendas.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f1">Tienda Online
+                                    Completa</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f2">Base de Datos
+                                    Dinámica</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f3">Panel de
+                                    Administración</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f4">Integración de
+                                    Pagos</span></li>
+                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f5">Tiempo según
+                                    proyecto</span></li>
                         </ul>
-                        <a href="https://wa.me/595983835222" class="btn btn-outline-primary w-100 py-3"
-                            target="_blank" data-i18n="pricing.custom.cta">Consultar WhatsApp</a>
+                        <a class="cta cta-outline cta-sm"
+                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20un%20proyecto%20a%20medida."
+                            target="_blank" rel="noopener" data-i18n="pricing.custom.cta">Consultar WhatsApp</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq py-5 bg-light" id="faq">
-        <div class="container py-5">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="display-5 fw-bold mb-3" data-i18n="faq.title">Preguntas Frecuentes</h2>
-                <p class="text-muted mx-auto max-600" data-i18n="faq.subtitle">Resolvemos tus dudas principales para
-                    que empieces tu proyecto con total claridad.</p>
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title" data-i18n="faq.title">Preguntas Frecuentes</h2>
+                <p class="section-sub" data-i18n="faq.subtitle">Resolvemos tus dudas principales para que empieces tu
+                    proyecto con total claridad.</p>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8" data-aos="fade-up">
-                    <div class="accordion accordion-flush shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="faqAccordion">
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
+                            <h3 class="accordion-header">
                                 <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq-1" data-i18n="faq.q1">
                                     ¿Cuánto tiempo toma desarrollar un sitio web?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="faq-1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted" data-i18n="faq.a1">
+                                <div class="accordion-body" data-i18n="faq.a1">
                                     Depende de la complejidad. Una web profesional (Landing Page) suele tomar entre 1 a
                                     2 semanas. Proyectos más grandes como tiendas online o sistemas a medida pueden
                                     tomar de 3 a 5 semanas.
@@ -445,131 +450,214 @@
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
+                            <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq-2" data-i18n="faq.q2">
                                     ¿Mi sitio web será compatible con celulares?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted" data-i18n-html="faq.a2">
+                                <div class="accordion-body" data-i18n-html="faq.a2">
                                     ¡Totalmente! Todos mis desarrollos son <strong>Responsive Design</strong>, lo que
                                     significa que se adaptan perfectamente a smartphones, tablets y computadoras.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
+                            <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq-3" data-i18n="faq.q3">
                                     ¿Incluyen optimización para Google (SEO)?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted" data-i18n="faq.a3">
+                                <div class="accordion-body" data-i18n="faq.a3">
                                     Sí, utilizo prácticas de código limpio y etiquetas semánticas para que tu sitio sea
                                     fácilmente indexable por Google, mejorando tu visibilidad en las búsquedas.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
-                            <h2 class="accordion-header">
+                            <h3 class="accordion-header">
                                 <button class="accordion-button collapsed fw-bold" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#faq-4" data-i18n="faq.q4">
                                     ¿Necesito pagar mantenimiento mensual?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body text-muted" data-i18n="faq.a4">
+                                <div class="accordion-body" data-i18n="faq.a4">
                                     No obligatoriamente. Una vez entregada la web, es tuya. Sin embargo, ofrezco planes
                                     de soporte opcionales para actualizaciones, seguridad y mejoras continuas.
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq-5" data-i18n="faq.q5">
+                                    ¿Cómo empezamos?
+                                </button>
+                            </h3>
+                            <div id="faq-5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" data-i18n="faq.a5">
+                                    Me escribís por WhatsApp, me contás sobre tu negocio y te paso un presupuesto
+                                    claro. Si aceptás, empezamos con el diseño.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact py-5" id="contacto">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-card p-5 shadow-lg rounded-4" data-aos="flip-up">
-                        <div class="text-center mb-5">
-                            <h2 class="display-6 fw-bold" data-i18n="contact.title">¿Listo para empezar?</h2>
-                            <p class="text-muted" data-i18n="contact.subtitle">Cuéntame sobre tu proyecto y trabajemos
-                                juntos.</p>
+    <!-- Contacto -->
+    <section class="pricing" id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-head contact-box">
+                        <h2 class="section-title" data-i18n="contact.title">Hablame directo por WhatsApp</h2>
+                        <p class="section-sub" data-i18n="contact.subtitle">Contame sobre tu negocio y vemos qué tipo
+                            de página necesitás.</p>
+                    </div>
+                    <div class="contact-box">
+                        <a class="contact-big" href="https://wa.me/595983835222" target="_blank" rel="noopener">0983
+                            835 222</a>
+                        <br>
+                        <a class="cta cta-primary"
+                            href="https://wa.me/595983835222?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20consultar%20sobre%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-whatsapp"></i> <span data-i18n="contact.cta">Abrir WhatsApp</span>
+                        </a>
+                    </div>
+                    <div class="contact-box">
+                        <h3 data-i18n="contact.social">Seguime en redes</h3>
+                        <div class="social-row">
+                            <a class="social-link" href="https://www.instagram.com/estigarribiaweb/" target="_blank"
+                                rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+                            <a class="social-link" href="https://www.facebook.com/profile.php?id=61567671897984"
+                                target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i> Facebook</a>
+                            <a class="social-link" href="https://www.tiktok.com/@estigarribia.web" target="_blank"
+                                rel="noopener"><i class="fab fa-tiktok"></i> TikTok</a>
                         </div>
-                        <form id="contactForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="name"
-                                            placeholder="Tu Nombre" data-i18n-placeholder="contact.name" required>
-                                        <label for="name" data-i18n="contact.name">Tu Nombre</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3">
-                                        <input type="email" class="form-control" id="email" placeholder="Email"
-                                            data-i18n-placeholder="contact.emailPlaceholder" required>
-                                        <label for="email" data-i18n="contact.email">Tu Correo</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating mb-3">
-                                        <textarea class="form-control" placeholder="Mensaje" id="message"
-                                            style="height: 150px" data-i18n-placeholder="contact.messagePlaceholder"
-                                            required></textarea>
-                                        <label for="message" data-i18n="contact.messageLabel">Cuéntame sobre tu
-                                            proyecto</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-primary btn-lg w-100 py-3"
-                                        data-i18n="contact.submit">Enviar Mensaje</button>
-                                </div>
-                                <div class="col-12 text-center mt-4">
-                                    <p class="mb-0" data-i18n="contact.direct">O contáctame directamente:</p>
-                                    <div class="mt-2">
-                                        <a href="https://wa.me/595983835222"
-                                            class="text-decoration-none fw-bold me-3"><img src="images/whatsapp.jpg"
-                                                alt="Whatsapp image icon" data-i18n-alt="contact.waAlt" width="50"
-                                                height="50"></a>
-                                        <a href="mailto:estigarribiaweb@gmail.com"
-                                            class="text-decoration-none fw-bold"><img src="images/email.png"
-                                                alt="Email image icon" data-i18n-alt="contact.emailAlt" width="50"
-                                                height="50"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                        <p><span data-i18n="contact.emailLabel">O escribime a</span>
+                            <a class="mail-link"
+                                href="mailto:estigarribiaweb@gmail.com">estigarribiaweb@gmail.com</a>
+                        </p>
                     </div>
                 </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-4" data-i18n="contact.formTitle">O dejame tu mensaje</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Tu Nombre"
+                                        data-i18n-placeholder="contact.name" required>
+                                    <label for="name" data-i18n="contact.name">Tu Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Email"
+                                        data-i18n-placeholder="contact.emailPlaceholder" required>
+                                    <label for="email" data-i18n="contact.email">Tu Correo</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" placeholder="Mensaje" id="message"
+                                        style="height: 150px" data-i18n-placeholder="contact.messagePlaceholder"
+                                        required></textarea>
+                                    <label for="message" data-i18n="contact.messageLabel">Cuéntame sobre tu
+                                        proyecto</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="cta cta-primary cta-block"
+                                    data-i18n="contact.submit">Enviar Mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="final on-dark">
+        <div class="container">
+            <h2 data-i18n="final.title">¿Listo para darle una presencia profesional a tu negocio?</h2>
+            <p class="section-sub" data-i18n="final.text">Contame sobre tu negocio y vemos qué tipo de página
+                necesitás.</p>
+            <a class="cta cta-primary"
+                href="https://wa.me/595983835222?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20consultar%20sobre%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+                target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i> <span data-i18n="final.cta">Hablar por WhatsApp</span>
+            </a>
+            <p class="price-line" data-i18n="final.price">Landing pages desde ₲599.000</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white text-center">
+    <footer class="py-5">
         <div class="container">
-            <p class="mb-0" data-i18n="footer.rights">&copy; 2026 Luis Estigarribia. Todos los derechos reservados.</p>
-            <div class="mt-2">
-                <a href="privacy.html" class="text-white opacity-75 me-3 text-decoration-none"
-                    data-i18n="footer.privacy">Privacidad</a>
-                <a href="terms.html" class="text-white opacity-75 text-decoration-none"
-                    data-i18n="footer.terms">Términos</a>
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="logo-ew" src="images/ew.jpg" data-i18n-alt="brand.alt"
+                            alt="Estigarribia Web — Páginas web para tu negocio" width="52" height="52" />
+                    </a>
+                    <p class="foot-brand">Estigarribia Web</p>
+                    <p class="foot-tag" data-i18n="footer.tag">Páginas web para tu negocio</p>
+                </div>
+                <div class="col-md-3">
+                    <h4 data-i18n="footer.nav">Secciones</h4>
+                    <ul class="foot-links">
+                        <li><a href="#hero" data-i18n="nav.home">Inicio</a></li>
+                        <li><a href="#portafolio" data-i18n="nav.works">Trabajos</a></li>
+                        <li><a href="#incluye" data-i18n="nav.include">Qué incluye</a></li>
+                        <li><a href="#precios" data-i18n="nav.pricing">Precios</a></li>
+                        <li><a href="#proceso" data-i18n="nav.process">Proceso</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 data-i18n="footer.contact">Contacto</h4>
+                    <ul class="foot-links">
+                        <li><a href="https://wa.me/595983835222" target="_blank" rel="noopener">WhatsApp: 0983 835
+                                222</a></li>
+                        <li><a href="mailto:estigarribiaweb@gmail.com">estigarribiaweb@gmail.com</a></li>
+                    </ul>
+                    <div class="foot-social mt-3">
+                        <a href="https://wa.me/595983835222" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/estigarribiaweb/" target="_blank" rel="noopener"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61567671897984" target="_blank"
+                            rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@estigarribia.web" target="_blank" rel="noopener"
+                            aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="foot-legal d-flex flex-wrap align-items-center">
+                <span data-i18n="footer.rights">&copy; 2026 Estigarribia Web. Todos los derechos reservados.</span>
+                <a href="privacy.html" data-i18n="footer.privacy">Privacidad</a>
+                <a href="terms.html" data-i18n="footer.terms">Términos</a>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp flotante -->
+    <a class="wa-float"
+        href="https://wa.me/595983835222?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20consultar%20sobre%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+        target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- i18n JS -->
     <script src="js/i18n.js"></script>
     <!-- Custom JS -->
