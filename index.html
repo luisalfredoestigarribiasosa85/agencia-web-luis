@@ -13,12 +13,17 @@
     <meta property="og:title" content="Estigarribia Web | Páginas web profesionales para negocios">
     <meta property="og:description"
         content="Páginas web profesionales para negocios y emprendedores. Landing pages desde ₲599.000.">
-    <meta property="og:image" content="images/ew.jpg">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:image:width" content="2848">
+    <meta property="og:image:height" content="1600">
     <meta name="theme-color" content="#06102a">
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap"
         rel="stylesheet">
+    <!-- Hero photo: high-priority (LCP) -->
+    <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -80,50 +85,43 @@
 
     <!-- Hero -->
     <section class="hero" id="hero">
-        <div class="hero-ring" aria-hidden="true"></div>
+        <img class="hero-photo" src="images/hero.jpg" alt="Bárbaro revisando su sitio web desde el celular en su local"
+            data-i18n-alt="hero.alt" fetchpriority="high">
+        <div class="hero-scrim" aria-hidden="true"></div>
         <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <h1 data-i18n-html="hero.title">Tu negocio merece una presencia profesional en Internet.</h1>
-                    <p class="lead" data-i18n="hero.subtitle">Creo páginas web profesionales para negocios y
-                        emprendedores, pensadas para mostrar tus servicios, generar confianza y facilitar el contacto
-                        con tus clientes.</p>
-                    <p class="hero-price">
-                        <span class="from" data-i18n="hero.from">Landing pages desde</span>
-                        <span class="amount">₲599.000</span>
-                    </p>
-                    <div class="hero-ctas">
-                        <a class="cta cta-primary"
-                            href="https://wa.me/595983835222?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20consultar%20sobre%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
-                            target="_blank" rel="noopener">
-                            <i class="fab fa-whatsapp"></i> <span data-i18n="hero.cta">Quiero mi página web</span>
-                        </a>
-                        <a class="cta cta-ghost" href="#portafolio" data-i18n="hero.secondary">Ver trabajos</a>
-                    </div>
-                    <p class="hero-note" data-i18n="hero.note">Te respondo por WhatsApp y vemos qué tipo de página
-                        necesita tu negocio.</p>
+            <div class="hero-inner">
+                <h1 data-i18n="hero.title">Tu negocio merece una presencia profesional en Internet.</h1>
+                <p class="lead" data-i18n="hero.subtitle">Creo páginas web profesionales para negocios y
+                    emprendedores, pensadas para mostrar tus servicios, generar confianza y facilitar el contacto
+                    con tus clientes.</p>
+                <p class="hero-price">
+                    <span class="from" data-i18n="hero.from">Landing pages desde</span>
+                    <span class="amount">₲599.000</span>
+                </p>
+                <div class="hero-ctas">
+                    <a class="cta cta-primary cta-xl"
+                        href="https://wa.me/595983835222?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20consultar%20sobre%20una%20p%C3%A1gina%20web%20para%20mi%20negocio."
+                        target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="hero.cta">Quiero mi página web</span>
+                    </a>
+                    <a class="cta cta-ghost" href="#portafolio">
+                        <i class="fas fa-arrow-down"></i> <span data-i18n="hero.secondary">Ver trabajos</span>
+                    </a>
                 </div>
-                <div class="col-lg-5">
-                    <div class="offer">
-                        <h2 data-i18n="offer.title">Para empezar: la landing inicial</h2>
-                        <p data-i18n="offer.text">Una página clara y profesional con lo esencial de tu negocio.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> <span data-i18n="offer.i1">Diseño a medida de tu
-                                    negocio</span></li>
-                            <li><i class="fas fa-check"></i> <span data-i18n="offer.i2">Se ve bien en celular, tablet
-                                    y computadora</span></li>
-                            <li><i class="fas fa-check"></i> <span data-i18n="offer.i3">Botón directo a tu
-                                    WhatsApp</span></li>
-                            <li><i class="fas fa-check"></i> <span data-i18n="offer.i4">Publicación y configuración
-                                    inicial incluidas</span></li>
-                        </ul>
-                        <a class="cta cta-primary cta-block"
-                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20negocio."
-                            target="_blank" rel="noopener">
-                            <i class="fab fa-whatsapp"></i> <span data-i18n="offer.cta">Consultar por WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
+                <p class="hero-note" data-i18n="hero.note">Te respondo por WhatsApp y vemos qué tipo de página
+                    necesita tu negocio.</p>
+            </div>
+        </div>
+        <div class="hero-proof">
+            <div class="container">
+                <span class="proof-label" data-i18n="proof.label">En vivo hoy</span>
+                <ul class="proof-sites">
+                    <li><a href="https://clan-ap.com/" target="_blank" rel="noopener">Clan AP</a></li>
+                    <li><a href="https://luisalfredoestigarribiasosa85.github.io/peluqueria-fem/" target="_blank"
+                            rel="noopener">Aura Beauty Studio</a></li>
+                    <li><a href="https://luisalfredoestigarribiasosa85.github.io/luna-nails/" target="_blank"
+                            rel="noopener">Luna Nails</a></li>
+                </ul>
             </div>
         </div>
     </section>
@@ -156,61 +154,86 @@
                     la de tu negocio.</p>
             </div>
 
-            <article class="work">
-                <span class="work-type" data-i18n="work.barber.type">Barbería</span>
-                <h3>BarberShop <span class="live" data-i18n="portfolio.live">En vivo</span></h3>
-                <p data-i18n="portfolio.barbershop.desc">Sitio Web demo para Barberías, incluye servicios, galeria de
-                    imagenes, ubicación del local, boton de Whatsapp y más.</p>
-                <div class="work-links">
-                    <a class="cta cta-outline cta-sm" href="https://luisalfredoestigarribiasosa85.github.io/barbershop/"
-                        target="_blank" rel="noopener">
-                        <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.view">Ver proyecto</span>
+            <div class="work-grid">
+                <article class="work">
+                    <a class="work-shot" href="https://clan-ap.com/" target="_blank" rel="noopener"
+                        data-shot-label="clan-ap.com" aria-label="Clan AP — clan-ap.com">
+                        <img src="images/works/clan-ap.png" alt="Sitio Clan AP: promoción 20% Extra con botón de WhatsApp"
+                            data-i18n-alt="work.clan.alt" loading="lazy" width="966" height="850">
                     </a>
-                    <a class="cta cta-primary cta-sm"
-                        href="https://wa.me/595983835222?text=Hola%2C%20vi%20el%20trabajo%20de%20BarberShop%20en%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio."
-                        target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i> <span data-i18n="work.similar">Quiero algo así</span>
-                    </a>
-                </div>
-            </article>
+                    <div class="work-body">
+                        <span class="work-type" data-i18n="work.clan.type">Campaña promocional</span>
+                        <h3>Clan AP <span class="live" data-i18n="portfolio.live">En vivo</span></h3>
+                        <p data-i18n="portfolio.clanap.desc">Landing page de campaña promocional: botón directo a WhatsApp,
+                            contador regresivo, sección de cómo funciona, preguntas frecuentes y Meta Pixel para medir
+                            resultados.</p>
+                        <div class="work-links">
+                            <a class="cta cta-outline cta-sm" href="https://clan-ap.com/"
+                                target="_blank" rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.view">Ver proyecto</span>
+                            </a>
+                            <a class="cta cta-primary cta-sm"
+                                href="https://wa.me/595983835222?text=Hola%2C%20vi%20el%20trabajo%20de%20Clan%20AP%20en%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio."
+                                target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="work.similar">Quiero algo así</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="work">
-                <span class="work-type" data-i18n="work.aura.type">Peluquería</span>
-                <h3>Aura Beauty Studio <span class="live" data-i18n="portfolio.live">En vivo</span></h3>
-                <p data-i18n="portfolio.aura.desc">Sitio Web demo para Peluquerías, incluye servicios, galeria de
-                    imagenes, ubicación del local, boton de Whatsapp y más.</p>
-                <div class="work-links">
-                    <a class="cta cta-outline cta-sm"
-                        href="https://luisalfredoestigarribiasosa85.github.io/peluqueria-fem/" target="_blank"
-                        rel="noopener">
-                        <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.view">Ver proyecto</span>
+                <article class="work">
+                    <a class="work-shot" href="https://luisalfredoestigarribiasosa85.github.io/peluqueria-fem/"
+                        target="_blank" rel="noopener" data-shot-label="peluqueria-fem"
+                        aria-label="Aura Beauty Studio — peluqueria-fem">
+                        <img src="images/works/aura-beauty.png" alt="Sitio Aura Beauty Studio: hero de peluquería con reserva por WhatsApp"
+                            data-i18n-alt="work.aura.alt" loading="lazy" width="966" height="850">
                     </a>
-                    <a class="cta cta-primary cta-sm"
-                        href="https://wa.me/595983835222?text=Hola%2C%20vi%20el%20trabajo%20de%20Aura%20Beauty%20Studio%20en%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio."
-                        target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i> <span data-i18n="work.similar">Quiero algo así</span>
-                    </a>
-                </div>
-            </article>
+                    <div class="work-body">
+                        <span class="work-type" data-i18n="work.aura.type">Peluquería</span>
+                        <h3>Aura Beauty Studio <span class="live" data-i18n="portfolio.live">En vivo</span></h3>
+                        <p data-i18n="portfolio.aura.desc">Sitio Web demo para Peluquerías, incluye servicios, galeria de
+                            imagenes, ubicación del local, boton de Whatsapp y más.</p>
+                        <div class="work-links">
+                            <a class="cta cta-outline cta-sm"
+                                href="https://luisalfredoestigarribiasosa85.github.io/peluqueria-fem/" target="_blank"
+                                rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.view">Ver proyecto</span>
+                            </a>
+                            <a class="cta cta-primary cta-sm"
+                                href="https://wa.me/595983835222?text=Hola%2C%20vi%20el%20trabajo%20de%20Aura%20Beauty%20Studio%20en%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio."
+                                target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="work.similar">Quiero algo así</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="work">
-                <span class="work-type" data-i18n="work.luna.type">Spa de uñas</span>
-                <h3>Luna Nails <span class="live" data-i18n="portfolio.live">En vivo</span></h3>
-                <p data-i18n="portfolio.lunanails.desc">Un sitio web moderno y profesional para Spa de Uñas, con una
-                    interfaz fácil de usar y una experiencia de usuario excelente.</p>
-                <div class="work-links">
-                    <a class="cta cta-outline cta-sm"
-                        href="https://luisalfredoestigarribiasosa85.github.io/luna-nails/" target="_blank"
-                        rel="noopener">
-                        <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.view">Ver proyecto</span>
+                <article class="work">
+                    <a class="work-shot" href="https://luisalfredoestigarribiasosa85.github.io/luna-nails/" target="_blank"
+                        rel="noopener" data-shot-label="luna-nails" aria-label="Luna Nails — luna-nails">
+                        <img src="images/works/luna-nails.png" alt="Sitio Luna Nails: hero de spa de uñas con reserva por WhatsApp"
+                            data-i18n-alt="work.luna.alt" loading="lazy" width="966" height="850">
                     </a>
-                    <a class="cta cta-primary cta-sm"
-                        href="https://wa.me/595983835222?text=Hola%2C%20vi%20el%20trabajo%20de%20Luna%20Nails%20en%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio."
-                        target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i> <span data-i18n="work.similar">Quiero algo así</span>
-                    </a>
-                </div>
-            </article>
+                    <div class="work-body">
+                        <span class="work-type" data-i18n="work.luna.type">Spa de uñas</span>
+                        <h3>Luna Nails <span class="live" data-i18n="portfolio.live">En vivo</span></h3>
+                        <p data-i18n="portfolio.lunanails.desc">Un sitio web moderno y profesional para Spa de Uñas, con una
+                            interfaz fácil de usar y una experiencia de usuario excelente.</p>
+                        <div class="work-links">
+                            <a class="cta cta-outline cta-sm"
+                                href="https://luisalfredoestigarribiasosa85.github.io/luna-nails/" target="_blank"
+                                rel="noopener">
+                                <i class="fas fa-external-link-alt"></i> <span data-i18n="portfolio.view">Ver proyecto</span>
+                            </a>
+                            <a class="cta cta-primary cta-sm"
+                                href="https://wa.me/595983835222?text=Hola%2C%20vi%20el%20trabajo%20de%20Luna%20Nails%20en%20la%20p%C3%A1gina%20de%20Estigarribia%20Web%20y%20quiero%20algo%20as%C3%AD%20para%20mi%20negocio."
+                                target="_blank" rel="noopener">
+                                <i class="fab fa-whatsapp"></i> <span data-i18n="work.similar">Quiero algo así</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
 
             <p class="works-more">
                 <a class="text-link" href="https://portfolio-luis-estigarribia.vercel.app/" target="_blank"
@@ -266,7 +289,7 @@
     <!-- Para quién -->
     <section class="who on-dark">
         <div class="container">
-            <h2 data-i18n="who.title">Si tenés un negocio, esto es para vos</h2>
+            <h2 class="who-title" data-i18n="who.title">Si tenés un negocio, esto es para vos</h2>
             <ul class="who-list">
                 <li data-i18n="who.b1">Barberías</li>
                 <li data-i18n="who.b2">Peluquerías</li>
@@ -333,92 +356,84 @@
     <!-- Precios -->
     <section class="pricing" id="precios">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="section-head price-lead">
-                        <h2 class="section-title" data-i18n="pricing.title">Precios claros</h2>
-                        <span class="from" data-i18n="pricing.from">Landing pages desde</span>
-                        <span class="amount">₲599.000</span>
-                        <p class="price-note" data-i18n="pricing.note">Precio inicial de una landing page. Si tu
-                            proyecto es más grande, lo presupuestamos aparte.</p>
-                        <a class="cta cta-primary"
-                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20negocio."
-                            target="_blank" rel="noopener">
-                            <i class="fab fa-whatsapp"></i> <span data-i18n="pricing.cta">Empezar por WhatsApp</span>
-                        </a>
-                    </div>
+            <div class="section-head">
+                <h2 class="section-title" data-i18n="pricing.title">Precios claros</h2>
+                <p class="section-sub" data-i18n="pricing.sub">Landing pages desde ₲599.000. Sin letra chica.</p>
+            </div>
+            <div class="plan-grid">
+                <div class="plan plan-featured">
+                    <span class="plan-badge" data-i18n="pricing.badge">Más elegido</span>
+                    <h3 data-i18n="pricing.landing.name">Plan Landing</h3>
+                    <p class="plan-tag" data-i18n="pricing.landing.desc">Tu primera presencia en internet.</p>
+                    <p class="plan-price">599.000 Gs.<small data-i18n="pricing.landing.or">ó 99 USD</small></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f1">Una sola página
+                                (Landing)</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f2">Diseño
+                                Responsive</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f3">Formulario de
+                                Contacto</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f4">Optimización SEO
+                                Básica</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f5">1 semana de
+                                entrega</span></li>
+                    </ul>
+                    <a class="cta cta-primary"
+                        href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20negocio."
+                        target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="pricing.landing.cta">Elegir Plan</span>
+                    </a>
                 </div>
-                <div class="col-lg-7">
-                    <div class="plan">
-                        <div class="plan-top">
-                            <h3 data-i18n="pricing.landing.name">Plan Landing</h3>
-                            <span class="plan-price">599.000 Gs. <small data-i18n="pricing.landing.or">ó 99
-                                    USD</small></span>
-                        </div>
-                        <p data-i18n="pricing.landing.desc">Tu primera presencia en internet.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f1">Una sola página
-                                    (Landing)</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f2">Diseño
-                                    Responsive</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f3">Formulario de
-                                    Contacto</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f4">Optimización SEO
-                                    Básica</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.landing.f5">1 semana de
-                                    entrega</span></li>
-                        </ul>
-                        <a class="cta cta-outline cta-sm"
-                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20negocio."
-                            target="_blank" rel="noopener" data-i18n="pricing.landing.cta">Elegir Plan</a>
-                    </div>
-                    <div class="plan">
-                        <div class="plan-top">
-                            <h3 data-i18n="pricing.business.name">Plan Empresa</h3>
-                            <span class="plan-price">799.000 Gs. <small data-i18n="pricing.business.or">ó 139
-                                    USD</small></span>
-                        </div>
-                        <p data-i18n="pricing.business.desc">Para Pymes que buscan crecer.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f1">Hasta 5
-                                    secciones</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f2">Blog o
-                                    Portafolio</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f3">Multi-idioma
-                                    (Opcional)</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f4">SEO Avanzado</span>
-                            </li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f5">2-3 semanas de
-                                    entrega</span></li>
-                        </ul>
-                        <a class="cta cta-outline cta-sm"
-                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20el%20Plan%20Empresa."
-                            target="_blank" rel="noopener" data-i18n="pricing.business.cta">Elegir Plan</a>
-                    </div>
-                    <div class="plan">
-                        <div class="plan-top">
-                            <h3 data-i18n="pricing.custom.name">A Medida</h3>
-                            <span class="plan-price"><span data-i18n="pricing.custom.price">Consultar</span> <small
-                                    data-i18n="pricing.custom.from">Desde 799 USD</small></span>
-                        </div>
-                        <p data-i18n="pricing.custom.desc">Sistemas complejos y tiendas.</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f1">Tienda Online
-                                    Completa</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f2">Base de Datos
-                                    Dinámica</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f3">Panel de
-                                    Administración</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f4">Integración de
-                                    Pagos</span></li>
-                            <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f5">Tiempo según
-                                    proyecto</span></li>
-                        </ul>
-                        <a class="cta cta-outline cta-sm"
-                            href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20un%20proyecto%20a%20medida."
-                            target="_blank" rel="noopener" data-i18n="pricing.custom.cta">Consultar WhatsApp</a>
-                    </div>
+                <div class="plan">
+                    <h3 data-i18n="pricing.business.name">Plan Empresa</h3>
+                    <p class="plan-tag" data-i18n="pricing.business.desc">Para Pymes que buscan crecer.</p>
+                    <p class="plan-price">799.000 Gs.<small data-i18n="pricing.business.or">ó 139 USD</small></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f1">Hasta 5
+                                secciones</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f2">Blog o
+                                Portafolio</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f3">Multi-idioma
+                                (Opcional)</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f4">SEO Avanzado</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.business.f5">2-3 semanas de
+                                entrega</span></li>
+                    </ul>
+                    <a class="cta cta-outline"
+                        href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20el%20Plan%20Empresa."
+                        target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="pricing.business.cta">Elegir Plan</span>
+                    </a>
                 </div>
+                <div class="plan">
+                    <h3 data-i18n="pricing.custom.name">A Medida</h3>
+                    <p class="plan-tag" data-i18n="pricing.custom.desc">Sistemas complejos y tiendas.</p>
+                    <p class="plan-price"><span data-i18n="pricing.custom.price">Consultar</span><small data-i18n="pricing.custom.from">Desde 799 USD</small></p>
+                    <ul>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f1">Tienda Online
+                                Completa</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f2">Base de Datos
+                                Dinámica</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f3">Panel de
+                                Administración</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f4">Integración de
+                                Pagos</span></li>
+                        <li><i class="fas fa-check"></i><span data-i18n="pricing.custom.f5">Tiempo según
+                                proyecto</span></li>
+                    </ul>
+                    <a class="cta cta-outline"
+                        href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20un%20proyecto%20a%20medida."
+                        target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="pricing.custom.cta">Consultar WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+            <div class="price-note-row">
+                <p class="price-note" data-i18n="pricing.note">Precio inicial de una landing page. Si tu proyecto es más
+                    grande, lo presupuestamos aparte.</p>
+                <a class="text-link"
+                    href="https://wa.me/595983835222?text=Hola%2C%20quiero%20consultar%20por%20una%20landing%20page%20para%20mi%20negocio."
+                    target="_blank" rel="noopener" data-i18n="pricing.cta">Empezar por WhatsApp</a>
             </div>
         </div>
     </section>
